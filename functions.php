@@ -25,9 +25,22 @@ function theme_enqueue_styles() {
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
+    wp_enqueue_script( 'fontawesome', 'https://kit.fontawesome.com/0e69954788.js', array(), false );
+    wp_enqueue_script( 'gsap-core' , 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js', array(), true );
+    wp_enqueue_script( 'gsap-mothion-path' , 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/MotionPathPlugin.min.js', array(), true );
+    wp_enqueue_script( 'exelixis-custom', get_stylesheet_directory_uri() . '/js/exelixis-custom.js', array(), $the_theme->get( 'Version' ), true );
 }
 
 function add_child_theme_textdomain() {
     load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
+
+
+// Enqueue font
+
+// function ex_font_family() {
+//     wp_enqueue_script( 'notoserif-font', 'https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap', array() );
+// }
+
+// add_action('wp_enqueue_scripts','ex_font_family');
