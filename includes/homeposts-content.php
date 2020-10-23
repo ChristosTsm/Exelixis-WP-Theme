@@ -6,84 +6,109 @@
 
             <h1>Ανακοινώσεις</h1>
 
-            <div class="post">
-
-                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/featured.png'; ?>" alt="featured">
+            <?php 
                 
-                <div class="featured-post-inner-text">
+                $featured_post_args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 1,
+                    'category_name' => 'Featured'
+                );
 
-                    <h2>Συνέντευξη στο Insurance Daily News</h2>
+                $_featured_posts = new WP_Query($featured_post_args);
 
-                    <img class="ex-title-date-devider" src="<?php echo get_stylesheet_directory_uri() . '/assets/divider.svg' ?>" alt="post date devider">
+            ?>
 
-                    <span class="post-date">30 Σεπτεμβριου<br>2020</span>
+            <?php if($_featured_posts->have_posts()) : ?>
+
+
+                <div class="post">
+
+                    <?php while($_featured_posts->have_posts()) : $_featured_posts->the_post(); ?>
+
+ 
+                        <?php if(has_post_thumbnail()) : ?>
+
+                            <img class="ex-featured-post-img" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+
+                        <?php endif; ?>
+                        
+                        <div class="featured-post-inner-text">
+
+                            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+
+                            <img class="ex-title-date-devider" src="<?php echo get_stylesheet_directory_uri() . '/assets/divider.svg' ?>" alt="post date devider">
+
+                            <span class="post-date"><?php echo get_the_date( 'j F' ); ?><br><?php echo get_the_date( 'Y' ); ?></span>
+
+                        </div>
+                        
+                        <p class="ex-blog-excerpt"><?php the_excerpt(); ?></p>
+
+                        <div class="ex-read-more">
+
+                            <img class="ex-read-more-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/arrow-long.svg'; ?>" alt="Περισσότερα">
+
+                            <a href="<?php the_permalink(); ?>" class="ex-btn-more-grey">Περισσοτερα</a>
+                        
+                        </div>
+
+                    <?php endwhile; ?>
 
                 </div>
-                
-                <p class="ex-blog-excerpt">Το ασφαλιστικό γραφείο Μαρία Γεωργαλά Ι.Κ.Ε. Εξέλιξις είναι ένα συγχρονο ασφαλιστικό γραφείο στελεχωμένο από έμπειρους ασφαλιστικούς διαμεσολαβητές, που ήδη εμπιστεύονται εδώ και πολλά χρόνια εκατοντάδες πελάτες σε όλη την Ελλάδα.
-                Η συνεχής εκπαίδευση σε ότι νέο υπάρχει μαζί με διαφάνεια στις διαδικασίες.</p>
 
-                <div class="ex-read-more">
-
-                    <img class="ex-read-more-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/arrow-long.svg'; ?>" alt="Περισσότερα">
-
-                    <a href="#" class="ex-btn-more-grey">Περισσοτερα</a>
-                
-                </div>
-
-            </div>
+            <?php endif; ?>
 
         </div>
 
         <div class="post-wrapper">
 
-            <div class="post">
+            <?php 
+                    
+                $post_args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 2,
+                    'category__not_in' => array(2)
+                );
 
-                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/post1.png' ?>" alt="post">
+                $_posts = new WP_Query($post_args);
 
-                <div class="featured-post-inner-text">
+            ?>
 
-                    <h2>Κοπη Πίτας 2016</h2>
+            <?php if($_posts->have_posts()) : ?>
 
-                    <img class="ex-title-date-devider-simple-post" src="<?php echo get_stylesheet_directory_uri() . '/assets/divider.svg' ?>" alt="post date devider">
+                <?php while($_posts->have_posts()) : $_posts->the_post(); ?>
 
-                    <span class="post-date">17 ΣΕΠ<br>2020</span>
+                    <div class="post-list">
 
-                </div>
+                        <?php if(has_post_thumbnail()) : ?>
 
-                <div class="ex-read-more">
+                        <img class="ex-post-img" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
 
-                    <img class="ex-read-more-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/arrow-long.svg'; ?>" alt="Περισσότερα">
+                        <?php endif; ?>
 
-                    <a href="#" class="ex-btn-more-grey">Περισσοτερα</a>
+                        <div class="featured-post-inner-text">
 
-                </div>
+                            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-            </div>
+                            <img class="ex-title-date-devider-simple-post" src="<?php echo get_stylesheet_directory_uri() . '/assets/divider.svg' ?>" alt="post date devider">
 
-            <div class="post">
+                            <span class="post-date"><?php echo get_the_date( 'j M' ); ?><br><?php echo get_the_date( 'Y' ); ?></span>
 
-                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/post2.png' ?>" alt="post">
+                        </div>
 
-                <div class="featured-post-inner-text">
+                        <div class="ex-read-more">
 
-                    <h2>Κοπη Πίτας 2016</h2>
+                            <img class="ex-read-more-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/arrow-long.svg'; ?>" alt="Περισσότερα">
 
-                    <img class="ex-title-date-devider-simple-post" src="<?php echo get_stylesheet_directory_uri() . '/assets/divider.svg' ?>" alt="post date devider">
+                            <a href="<?php the_permalink(); ?>" class="ex-btn-more-grey">Περισσοτερα</a>
 
-                    <span class="post-date">17 ΣΕΠ<br>2020</span>
+                        </div>
 
-                </div>
+                    </div>
 
-                <div class="ex-read-more">
+                <?php endwhile; ?>
 
-                    <img class="ex-read-more-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/arrow-long.svg'; ?>" alt="Περισσότερα">
-
-                    <a href="#" class="ex-btn-more-grey">Περισσοτερα</a>
-
-                </div>
-
-            </div>
+            <?php endif; ?>
 
         </div>
 

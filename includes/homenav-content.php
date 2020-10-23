@@ -1,3 +1,5 @@
+<?php get_template_part('includes/homenav','expanded');?>
+
 <header class="ex-header">
     <nav class="ex-nav">
         <div class="ex-logo">
@@ -9,7 +11,7 @@
         <ul class="ex-ul">
             <li class="ex-links"><span class="ex-active">T:</span> 24210 37540</li>
             <li class="ex-links"><span class="ex-active lang-selector">EL</span> EN</li>
-            <li class="ex-links">ΜΕΝΟΥ <a href="#"><i class="fas fa-bars"></i></a></li>
+            <li class="ex-links">ΜΕΝΟΥ <i id='ex-open-menu' class="fas fa-bars"></i></li>
         </ul>
     </nav>
     <div class="ex-inner-text">

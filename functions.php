@@ -35,12 +35,3 @@ function add_child_theme_textdomain() {
     load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
-
-
-// Enqueue font
-
-// function ex_font_family() {
-//     wp_enqueue_script( 'notoserif-font', 'https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap', array() );
-// }
-
-// add_action('wp_enqueue_scripts','ex_font_family');

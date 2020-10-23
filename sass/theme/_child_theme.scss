@@ -13,7 +13,7 @@ a:hover { text-decoration: none; }
 .ex-active { color: $primary; }
 .ex-ml { margin-left: 126px; }
 .ex-mr { margin-right: 126px; }
-
+.understrap-read-more-link { display: none; } // temp solution to disable understrap read more.
 
 
 // header
@@ -73,10 +73,18 @@ a:hover { text-decoration: none; }
         }
 
         .ex-links {
+            font-family: $font-secondary;
             margin: 0 45px;
+            i {
+                cursor: pointer;
+            }
             a {
                 margin-left: 25px;
             }
+        }
+
+        span {
+            font-family: $font-secondary;
         }
     }   
 }
@@ -381,7 +389,7 @@ a:hover { text-decoration: none; }
     .ex-blog-excerpt {
         margin: 0 0 40px 0;
         font-family: 'IBM Plex Sans';
-        width: 800px;
+        max-width: 800px;
         font-size: 1.3em;
     }
 
@@ -395,6 +403,22 @@ a:hover { text-decoration: none; }
 
 .post {
     margin-bottom: 50px;
+    max-width: 1000px;
+
+    .ex-featured-post-img {
+        min-width: 100%;
+        max-height: 500px;
+    }
+
+    .ex-post-img {
+        max-width: 400px;
+        max-height: 300px;
+    }
+}
+
+.post-list {
+    max-width: 500px;
+    margin-bottom: 80px;
 }
 
 
@@ -405,6 +429,7 @@ a:hover { text-decoration: none; }
     border-bottom: 3px solid $primary;
     padding-bottom: 10px;
     margin-bottom: 15px;
+    margin-top: 5px;
 
     h2 {
         font-size: 2.2em;
@@ -434,7 +459,7 @@ a:hover { text-decoration: none; }
     display: flex;
     align-items: center;
     overflow: hidden;
-
+    width: 50%;
     &:hover .ex-read-more-arrow {
         transform: translateX(-40px);
     }
@@ -525,7 +550,7 @@ footer {
         .ex-footer-img-text {
             color: #fff;
             font-family: $font-secondary;
-            margin: 95πχ 70px 100px 115px;
+            margin: 95px 70px 100px 115px;
             h3 {
                 font-size: 2em;
                 margin-bottom: 30px;
@@ -613,5 +638,114 @@ footer {
     font-size: 1.125em;
     p {
         margin-bottom: 0;
+    }
+}
+
+
+// expanded navigation
+
+
+.ex-expanded-navigation {
+    min-height: 80vh;
+    padding-top: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -999;
+    background-color: #fff;
+    min-width: 100%;
+    transition: all ease-in-out 250ms;
+    opacity: 0;
+    overflow: hidden;
+
+    .close-expanded-menu-icon {
+        position: absolute;
+        right: 50px;
+        top: 20px;
+        font-size: 2em;
+        color: $primary;
+        cursor: pointer;
+    }
+}
+
+.ex-expanded-address-img {
+    height: 500px;
+}
+
+.ex-expanded-col-wrapper {
+
+    // position: relative;
+
+    ul {
+        list-style-type: none;
+        position: relative;
+            a {
+                font-size: 1.5em;
+                font-family: $font-primary;
+            }
+
+            li {
+                margin-bottom: 15px;
+                h4 {
+                    color: $primary;
+                }
+            }
+    
+        .ex-expanded-link { 
+            a {
+                text-transform: uppercase;
+                font-size: 1em;
+            }
+            
+        }
+    }
+
+    .ex-expanded-title-rotated {
+        text-transform: uppercase;
+        transform: rotate(-90deg) translateX(90%);
+        position: absolute;
+        color: $light-grey;
+        font-weight: 300;
+        left: 20px;
+        top: 50%;
+        font-size: 3.5em;
+        font-family: $font-secondary;
+    }
+
+    .ex-expanded-title-rotated-long {
+        @extend .ex-expanded-title-rotated;
+        left: -20%;
+        top: 80%;
+    }
+
+} 
+
+.ex-expanded-info-wrapper {
+    margin-top: 60px;
+    font-size: 1.2em;
+
+    div {
+        margin: 10px 0 0 15px;
+    }  
+    
+    .ex-expanded-address {
+        color: $primary;
+        font-family: $font-secondary;
+    }
+
+    .ex-expanded-tel {
+        margin: 40px 0 60px 15px;
+        p {
+            span {
+                color: $primary;
+            }
+        }
+    }
+
+    .ex-expanded-social-icons {
+        a {
+            margin-right: 15px;
+            color: $dark-grey;
+        }
     }
 }

@@ -11632,6 +11632,9 @@ a:hover {
 .ex-mr {
   margin-right: 126px; }
 
+.understrap-read-more-link {
+  display: none; }
+
 .ex-header {
   height: 100vh;
   background: url("../assets/header-bg.png");
@@ -11684,9 +11687,14 @@ a:hover {
     .ex-nav ul .lang-selector {
       margin-right: 20px; }
     .ex-nav ul .ex-links {
+      font-family: "IBM Plex Sans", arial;
       margin: 0 45px; }
+      .ex-nav ul .ex-links i {
+        cursor: pointer; }
       .ex-nav ul .ex-links a {
         margin-left: 25px; }
+    .ex-nav ul span {
+      font-family: "IBM Plex Sans", arial; }
 
 .arrow svg {
   position: absolute;
@@ -11939,7 +11947,7 @@ a:hover {
 .post-wrapper .ex-blog-excerpt {
   margin: 0 0 40px 0;
   font-family: 'IBM Plex Sans';
-  width: 800px;
+  max-width: 800px;
   font-size: 1.3em; }
 
 .post-wrapper .ex-btn-more-grey {
@@ -11949,7 +11957,18 @@ a:hover {
   padding: 10px 40px; }
 
 .post {
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  max-width: 1000px; }
+  .post .ex-featured-post-img {
+    min-width: 100%;
+    max-height: 500px; }
+  .post .ex-post-img {
+    max-width: 400px;
+    max-height: 300px; }
+
+.post-list {
+  max-width: 500px;
+  margin-bottom: 80px; }
 
 .featured-post-inner-text {
   display: -webkit-box;
@@ -11963,7 +11982,8 @@ a:hover {
           align-items: center;
   border-bottom: 3px solid #f37a21;
   padding-bottom: 10px;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  margin-top: 5px; }
   .featured-post-inner-text h2 {
     font-size: 2.2em;
     color: #f37a21;
@@ -11989,7 +12009,8 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 50%; }
   .ex-read-more:hover .ex-read-more-arrow {
     -webkit-transform: translateX(-40px);
             transform: translateX(-40px); }
@@ -12073,7 +12094,7 @@ footer {
     .ex-footer-img .ex-footer-img-div .ex-footer-img-text {
       color: #fff;
       font-family: "IBM Plex Sans", arial;
-      margin: 95πχ 70px 100px 115px; }
+      margin: 95px 70px 100px 115px; }
       .ex-footer-img .ex-footer-img-div .ex-footer-img-text h3 {
         font-size: 2em;
         margin-bottom: 30px; }
@@ -12148,6 +12169,76 @@ footer {
   font-size: 1.125em; }
   .ex-copyrights p {
     margin-bottom: 0; }
+
+.ex-expanded-navigation {
+  min-height: 80vh;
+  padding-top: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -999;
+  background-color: #fff;
+  min-width: 100%;
+  -webkit-transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms;
+  opacity: 0;
+  overflow: hidden; }
+  .ex-expanded-navigation .close-expanded-menu-icon {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    font-size: 2em;
+    color: #f37a21;
+    cursor: pointer; }
+
+.ex-expanded-address-img {
+  height: 500px; }
+
+.ex-expanded-col-wrapper ul {
+  list-style-type: none;
+  position: relative; }
+  .ex-expanded-col-wrapper ul a {
+    font-size: 1.5em;
+    font-family: "Noto Serif", arial; }
+  .ex-expanded-col-wrapper ul li {
+    margin-bottom: 15px; }
+    .ex-expanded-col-wrapper ul li h4 {
+      color: #f37a21; }
+  .ex-expanded-col-wrapper ul .ex-expanded-link a {
+    text-transform: uppercase;
+    font-size: 1em; }
+
+.ex-expanded-col-wrapper .ex-expanded-title-rotated, .ex-expanded-col-wrapper .ex-expanded-title-rotated-long {
+  text-transform: uppercase;
+  -webkit-transform: rotate(-90deg) translateX(90%);
+          transform: rotate(-90deg) translateX(90%);
+  position: absolute;
+  color: #e6e6e6;
+  font-weight: 300;
+  left: 20px;
+  top: 50%;
+  font-size: 3.5em;
+  font-family: "IBM Plex Sans", arial; }
+
+.ex-expanded-col-wrapper .ex-expanded-title-rotated-long {
+  left: -20%;
+  top: 80%; }
+
+.ex-expanded-info-wrapper {
+  margin-top: 60px;
+  font-size: 1.2em; }
+  .ex-expanded-info-wrapper div {
+    margin: 10px 0 0 15px; }
+  .ex-expanded-info-wrapper .ex-expanded-address {
+    color: #f37a21;
+    font-family: "IBM Plex Sans", arial; }
+  .ex-expanded-info-wrapper .ex-expanded-tel {
+    margin: 40px 0 60px 15px; }
+    .ex-expanded-info-wrapper .ex-expanded-tel p span {
+      color: #f37a21; }
+  .ex-expanded-info-wrapper .ex-expanded-social-icons a {
+    margin-right: 15px;
+    color: #666; }
 
 /*
 * Use existing Bootstrap 4 classes and
