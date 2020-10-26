@@ -11648,7 +11648,8 @@ a:hover {
     font-family: 'NotoSerif', Arial, Helvetica, sans-serif;
     color: #fff;
     position: absolute;
-    bottom: 20%; }
+    bottom: 20%;
+    z-index: 5; }
     .ex-header .ex-inner-text h1 {
       font-size: 5em; }
 
@@ -11696,12 +11697,16 @@ a:hover {
     .ex-nav ul span {
       font-family: "IBM Plex Sans", arial; }
 
-.arrow svg {
+.arrow {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 780px; }
+  height: 80%;
+  background: url("../assets/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom left; }
 
 .intro-section {
   padding: 80px 0;
@@ -12239,6 +12244,88 @@ footer {
   .ex-expanded-info-wrapper .ex-expanded-social-icons a {
     margin-right: 15px;
     color: #666; }
+
+.ex-navbar-secondary {
+  background: #f37a21; }
+
+.services-wrapper {
+  height: 1500px; }
+
+.ex-sec-links {
+  list-style-type: none;
+  font-family: "IBM Plex Sans", arial;
+  font-size: 1.2em; }
+  .ex-sec-links i {
+    color: #fff;
+    margin-left: 30px;
+    cursor: pointer; }
+  .ex-sec-links .ex-active {
+    color: #fff;
+    font-family: "IBM Plex Sans", arial; }
+  .ex-sec-links .lang-selector {
+    font-family: "IBM Plex Sans", arial;
+    margin-right: 15px; }
+  .ex-sec-links:nth-child(even) {
+    margin: 0 50px; }
+
+.service-single-post {
+  background: #e6e6e6;
+  padding: 150px 0; }
+
+.service-single-back-link {
+  margin-bottom: 120px; }
+  .service-single-back-link img {
+    width: 50px;
+    margin-right: 15px; }
+  .service-single-back-link a {
+    text-transform: uppercase;
+    font-family: "IBM Plex Sans", arial;
+    font-size: 1.1em; }
+
+.breadcrump {
+  margin-bottom: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.1em; }
+  .breadcrump a {
+    color: #666;
+    text-transform: capitalize;
+    -webkit-transition: all ease-in-out 250ms;
+    transition: all ease-in-out 250ms; }
+    .breadcrump a:hover {
+      color: #f37a21; }
+  .breadcrump span {
+    margin: 0 10px; }
+
+.service-single-hr {
+  border: 2px solid #f37a21;
+  width: 35%;
+  margin-left: -50px; }
+
+.service-single-title {
+  font-size: 4em;
+  color: #f37a21;
+  font-weight: 600;
+  text-transform: uppercase; }
+
+.single-service-content-part {
+  color: #f37a21;
+  font-size: 2em; }
+
+.services-archive {
+  height: 1200px;
+  background: #e6e6e6; }
+
+.service-item h1 {
+  text-transform: uppercase; }
+
+.service-item hr {
+  border: 2px solid #f37a21;
+  margin: 15px 0; }
+
+.service-item .service-item-img-wrapper img {
+  width: 250px; }
 
 /*
 * Use existing Bootstrap 4 classes and

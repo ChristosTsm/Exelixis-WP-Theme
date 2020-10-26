@@ -35,3 +35,27 @@ function add_child_theme_textdomain() {
     load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
+
+
+
+function services_custom_post_type() {
+
+    $args = array(
+
+        'labels' => array(
+            'name' => 'Υπηρεσίες',
+            'singular_name' => 'Υπηρεσία'
+        ),
+        'menu_icon' => 'dashicons-portfolio',
+        'hierarchical' => true,
+        'public' => true,
+        'has_archive' => true,
+        'show_in_rest' => true,
+        'supports' => array('title','editor', 'thumbnail')
+    );
+
+    register_post_type( 'services', $args );
+
+}
+
+add_action( 'init', 'services_custom_post_type' );

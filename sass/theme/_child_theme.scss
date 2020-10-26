@@ -32,6 +32,7 @@ a:hover { text-decoration: none; }
         color: #fff;
         position: absolute;
         bottom: 20%;
+        z-index: 5;
         h1 {
             font-size: 5em;
         }
@@ -90,16 +91,17 @@ a:hover { text-decoration: none; }
 }
 
 
-.arrow {
-    svg {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 780px;
-    }
+.arrow { 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background: url('../assets/arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom left;
 }
-
 // Intro
 
 .intro-section {
@@ -746,6 +748,122 @@ footer {
         a {
             margin-right: 15px;
             color: $dark-grey;
+        }
+    }
+}
+
+
+// Secondary Navigation Bar
+
+.ex-navbar-secondary {
+    background: $primary;
+}
+
+
+.services-wrapper {
+    height: 1500px;
+}
+
+.ex-sec-links {
+    list-style-type: none;
+    font-family: $font-secondary;
+    font-size: 1.2em;
+    i {
+        color: #fff;
+        margin-left: 30px;
+        cursor: pointer;
+    }
+    .ex-active {
+        color: #fff;
+        font-family: $font-secondary;
+    }
+    .lang-selector {
+        font-family: $font-secondary;
+        margin-right: 15px;
+    }
+    &:nth-child(even) {
+        margin: 0 50px;
+    }
+}
+
+
+.service-single-post {
+    background: $light-grey;
+    padding: 150px 0;
+}
+
+.service-single-back-link {
+    margin-bottom: 120px;
+
+    img {
+        width: 50px;
+        margin-right: 15px;
+    }
+    a {
+        text-transform: uppercase;
+        font-family: $font-secondary;
+        font-size: 1.1em;
+    }
+}
+
+.breadcrump {
+    margin-bottom: 120px;
+    display: flex;
+    font-size: 1.1em;
+    a {
+        color: $dark-grey;
+        text-transform: capitalize;
+        transition: all ease-in-out 250ms;
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    span {
+        margin: 0 10px;
+    }
+}
+
+.service-single-hr {
+    border: 2px solid $primary;
+    width: 35%;
+    margin-left: -50px;
+}
+
+.service-single-title {
+    font-size: 4em;
+    color: $primary;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.single-service-content-part {
+    color: $primary;
+    font-size: 2em;
+}
+
+
+.services-archive {
+    height: 1200px;
+    background: $light-grey;
+}
+
+
+.service-item {
+
+    h1 {
+        text-transform: uppercase;
+    }
+
+    hr {
+        border: 2px solid $primary;
+        margin: 15px 0;
+    }
+
+    .service-item-img-wrapper {
+
+        img {
+            width: 250px;
         }
     }
 }
