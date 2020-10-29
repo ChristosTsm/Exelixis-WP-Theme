@@ -47,3 +47,18 @@ function closeMegaMenu() {
     menu.style.opacity = 0;
     menu.style.zIndex = -999;
 }
+
+
+let navbar = document.getElementById('home-nav');
+// let logo = document.querySelector('.ex-logo');
+// let lettersLogo = document.querySelector('.ex-letters-logo');
+
+window.onscroll = function() {navScrollFunction()};
+
+function navScrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    navbar.classList.add('navbar-on-scroll');
+  } else {
+    navbar.classList.remove('navbar-on-scroll');
+  }
+}

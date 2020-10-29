@@ -12,7 +12,7 @@
 
                     <img src="<?php echo get_stylesheet_directory_uri() . '/assets/service-single-arrow.svg' ?>" alt="Επιστροφή στις υπηρεσίες">
 
-                    <a href="/ipiresies">Επιστροφη στις υπηρεσιες</a>
+                    <a href="<?php echo esc_url( get_page_link( 76 ) ); ?>">Επιστροφη στις υπηρεσιες</a>
 
                 </div>
 
@@ -22,7 +22,7 @@
 
                 <div class="breadcrump">
                     <a href="/">Αρχική</a><span>/</span>
-                    <a href="/ipiresies">Υπηρεσίες</a><span>/</span>
+                    <a href="<?php  echo esc_url( get_page_link( 76 ) );  ?>">Υπηρεσίες</a><span>/</span>
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </div>
 

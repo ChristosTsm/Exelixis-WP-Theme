@@ -1,6 +1,9 @@
-<section class="ex-home-posts">
+<?php get_header('secondary'); ?>
 
-    <div class="ex-ml ex-mr d-flex d-flex-mobile justify-content-around">
+
+<section class="ex-blog-posts">
+
+    <div class="ex-ml ex-mr d-flex justify-content-around">
 
         <div class="post-wrapper"> 
 
@@ -25,7 +28,7 @@
 
                     <?php while($_featured_posts->have_posts()) : $_featured_posts->the_post(); ?>
 
- 
+
                         <?php if(has_post_thumbnail()) : ?>
 
                             <img class="ex-featured-post-img" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
@@ -114,16 +117,64 @@
 
     </div>
 
-    <div class="btn-blog-all">
+    <div class="rest-of-posts">
 
-        <a href="<?php echo esc_url( get_page_link( 91 ) ); ?>">
-
-            <img class="btn-blog-all-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/services-arrow.svg' ?>" alt="όλες οι υπηρεσίες" >
-
-            Ολες οι ανακοινωσεις
+    <?php         
         
-        </a>
+        $rest_of_posts = array(
+            'post_type' => 'post',
+            'posts_per_page' => 9,
+            'category__not_in' => array(2),
+            'offset' => 2,
+        );
+
+        $rest_of_posts = new WP_Query($rest_of_posts);
+
+    ?>
+
+        <div class="row ex-mr ex-ml">
+
+             <?php if($rest_of_posts->have_posts()) : ?>
+
+                <?php while($rest_of_posts->have_posts()) : $rest_of_posts->the_post(); ?>
+
+                    <div class="col-md-4 p-5">
+
+                        <?php if(has_post_thumbnail()) : ?>
+
+                        <img class="ex-post-img" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+
+                        <?php endif; ?>
+
+                        <div class="featured-post-inner-text">
+
+                            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+
+                            <img class="ex-title-date-devider-simple-post" src="<?php echo get_stylesheet_directory_uri() . '/assets/divider.svg' ?>" alt="post date devider">
+
+                            <span class="post-date"><?php echo get_the_date( 'j M' ); ?><br><?php echo get_the_date( 'Y' ); ?></span>
+
+                        </div>
+
+                        <div class="ex-read-more">
+
+                            <img class="ex-read-more-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/arrow-long.svg'; ?>" alt="Περισσότερα">
+
+                            <a href="<?php the_permalink(); ?>" class="ex-btn-more-grey">Περισσοτερα</a>
+
+                        </div>
+
+                    </div>
+
+                <?php endwhile; ?>
+
+            <?php endif; ?>
+
+        </div>
 
     </div>
 
 </section>
+
+
+<?php get_footer(); ?>

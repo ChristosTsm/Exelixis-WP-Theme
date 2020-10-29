@@ -1,7 +1,7 @@
 <?php get_template_part('includes/homenav','expanded');?>
 
 <nav class="d-flex justify-content-between ex-navbar-secondary align-items-center">
-    <a href="#" class="ex-ml"><img src="<?php echo get_stylesheet_directory_uri() . '/assets/elogo.png' ?>" alt="Εξέλιξις Logo"></a>
+    <a href="/" class="ex-ml"><img src="<?php echo get_stylesheet_directory_uri() . '/assets/elogo.png' ?>" alt="Εξέλιξις Logo"></a>
 
     <ul class="ex-ul d-flex ex-mr mb-0">
         <li class="ex-sec-links"><span class="ex-active">T:</span> 24210 37540</li>

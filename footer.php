@@ -1,8 +1,14 @@
+<?php
+
+$home_page = 35;
+
+?>
+
     <footer>
 
-        <div class="d-flex">
+        <div class="d-flex d-flex-mobile">
 
-            <div class="ex-location text-right flex-grow-1">
+            <div class="ex-location text-right flex-grow-1 mobile-hidden">
 
                 <img src="<?php echo get_stylesheet_directory_uri() . '/assets/footer-location.png' ; ?>" alt="footer">
 
@@ -16,10 +22,7 @@
 
                         <h3>Είμαστε στη διάθεση σας</h3>
 
-                        <p>
-                        Για οποιαδήποτε απορία σχετικά με τις υπηρεσίες μας παρακαλούμε
-                        επικοινωνήστε μαζί μας στην φόρμα επικοινωνίας στον παρακάτω σύνδεσμο
-                        </p>
+                        <p><?php the_field('footer_banner_text', $home_page); ?></p>
 
                     </div>
 
@@ -43,29 +46,27 @@
 
                 <div class="ex-footer-address">
 
-                    <p>2ας Νοεμβρίου 101</p>
-
-                    <p>Βόλος Τ.Κ. 38333</p>
+                    <p><?php the_field('address', $home_page); ?></p>
 
                 </div>
 
                 <div class="ex-footer-tel">
 
-                    <p><span>Τ: </span>24210 37540</p>
+                    <p><span>Τ: </span><?php the_field('tel', $home_page); ?></p>
 
-                    <p><span>F: </span>24210 37541</p>
+                    <p><span>F: </span><?php the_field('fax', $home_page); ?></p>
 
-                    <p><span>E: </span>info@exelixis-ins.gr</p>
+                    <p><span>E: </span><?php the_field('email', $home_page); ?></p>
 
                 </div>
 
                 <div class="ex-footer-social-icons">
 
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="<?php the_field('facebook_link', $home_page); ?>"><i class="fab fa-facebook-f"></i></a>
 
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="<?php the_field('twitter_link', $home_page); ?>"><i class="fab fa-twitter"></i></a>
 
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="<?php the_field('linkedin_link', $home_page); ?>"><i class="fab fa-linkedin-in"></i></a>
 
                 </div>
 
@@ -81,7 +82,7 @@
 
     </footer>
 
-    <?php wp_footer(); ?>
+        <?php wp_footer(); ?>
 
 </body>
 

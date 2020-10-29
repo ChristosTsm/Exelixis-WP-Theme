@@ -14,7 +14,7 @@ a:hover { text-decoration: none; }
 .ex-ml { margin-left: 126px; }
 .ex-mr { margin-right: 126px; }
 .understrap-read-more-link { display: none; } // temp solution to disable understrap read more.
-
+.desktop-hidden { display: none; }
 
 // header
 .ex-header {
@@ -39,6 +39,62 @@ a:hover { text-decoration: none; }
     }
 }
 
+
+.navbar-on-scroll {
+    position: fixed;
+    top: 0 !important;
+    min-width: 100% !important;
+    margin: 0 !important;
+    background: $primary !important;
+    z-index: 200;
+    .ex-logo {
+        display: inline-block;
+        a {
+            margin-left: 45px !important;
+            img {
+                width: 80px !important;
+                height: 80px !important;
+            }
+        }
+        font-size: 2.5em;
+        color: $light-grey;
+        text-transform: lowercase;
+        font-weight: 600;
+
+        .ex-letters-logo {
+            display: none;
+        }
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        margin-bottom: 0;
+
+        .lang-selector {
+            margin-right: 20px;
+        }
+
+        .ex-links {
+            font-family: $font-secondary;
+            margin: 0 45px;
+            color: #fff !important;
+            i {
+                cursor: pointer;
+            }
+            a {
+                margin-left: 25px;
+            }
+        }
+
+        span {
+            font-family: $font-secondary;
+            color: #fff !important;
+        }
+    }   
+}
+
+
 .ex-nav {
     display: flex;
     justify-content: space-between;
@@ -47,6 +103,7 @@ a:hover { text-decoration: none; }
     margin-left: 150px;
     max-height: 80px;
     margin-top: 30px;
+    transition: all ease-in-out 200ms;
     .ex-logo {
         display: inline-block;
         a {
@@ -376,6 +433,9 @@ a:hover { text-decoration: none; }
 .ex-home-posts {
     background-color: $light-grey;
     padding: 150px 0;
+    & > div {
+        gap: 50px;
+    }
 }
 
 .post-wrapper {
@@ -403,6 +463,20 @@ a:hover { text-decoration: none; }
     }
 }
 
+.ex-blog-excerpt {
+    margin: 0 0 40px 0;
+    font-family: 'IBM Plex Sans';
+    max-width: 800px;
+    font-size: 1.3em;
+}
+
+.ex-btn-more-grey {
+    color: $dark-grey;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    padding: 10px 40px;
+}
+
 .post {
     margin-bottom: 50px;
     max-width: 1000px;
@@ -411,11 +485,12 @@ a:hover { text-decoration: none; }
         min-width: 100%;
         max-height: 500px;
     }
+}
 
-    .ex-post-img {
-        max-width: 400px;
-        max-height: 300px;
-    }
+.ex-post-img {
+    max-width: 400px;
+    max-height: 300px;
+    min-width: 100%;   
 }
 
 .post-list {
@@ -524,6 +599,7 @@ a:hover { text-decoration: none; }
 
 footer {
     margin-top: -50px;
+    overflow: hidden;
 }
 
 .ex-location {
@@ -538,6 +614,7 @@ footer {
 
 .ex-footer-img {
     min-width: 600px;
+    margin-top: -5px;
 
     .ex-footer-img-div {
         width: 680px;
@@ -570,7 +647,6 @@ footer {
         margin-left: auto;
         justify-content: center;
         align-items: center;
-        cursor: pointer;
         a {
             position: relative;
             background: #fff;
@@ -650,7 +726,7 @@ footer {
 .ex-expanded-navigation {
     min-height: 80vh;
     padding-top: 100px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: -999;
@@ -716,7 +792,7 @@ footer {
 
     .ex-expanded-title-rotated-long {
         @extend .ex-expanded-title-rotated;
-        left: -20%;
+        left: -5%;
         top: 80%;
     }
 
@@ -844,26 +920,90 @@ footer {
 
 
 .services-archive {
-    height: 1200px;
     background: $light-grey;
+    padding-bottom: 100px;
+}
+
+.services {
+    padding: 100px 0;
+    font-size: 3.5em;
+    color: $primary;
+    font-weight: 600;
 }
 
 
 .service-item {
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
     h1 {
         text-transform: uppercase;
+        font-size: 2em;
+        margin-top: 20px;
     }
 
     hr {
         border: 2px solid $primary;
-        margin: 15px 0;
+        margin: 15px auto;
+        width: 60%;
+    }
+
+    p {
+        padding: 0 40px;
     }
 
     .service-item-img-wrapper {
 
         img {
-            width: 250px;
+            max-height: 280px;
         }
     }
+}
+
+
+.single-post-date {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    img {
+        max-width: 100px;
+        margin-right: 20px;
+    }
+
+    span {
+        color: $primary;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1.3em;
+    }
+
+}
+
+.single-post-wrapper {
+    
+    .single-post-img {
+        min-width: 100%;
+    }
+
+}
+
+.blog-single-title {
+    @extend .service-single-title;
+    margin: 15px 0;
+    text-transform: capitalize;
+}
+
+.blog-single-hr {
+    @extend .service-single-hr;
+    margin-left: 0;
+    width: 100%;
+}
+
+
+.ex-blog-posts {
+    background: $light-grey;
+    padding: 100px 0;
 }

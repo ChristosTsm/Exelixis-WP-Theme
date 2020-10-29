@@ -8,7 +8,7 @@
 
             <div class="col-sm">
 
-                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/mega-menu-logo.png' ?>" alt="Εξέλιξις">
+                <img class="mobile-hidden" src="<?php echo get_stylesheet_directory_uri() . '/assets/mega-menu-logo.png' ?>" alt="Εξέλιξις">
 
             </div>
 
@@ -16,15 +16,16 @@
 
                 <h3 class="ex-expanded-title-rotated">Μενου</h3>
 
+
                 <ul>
 
-                    <li><a href="#">Αρχική</a></li>
+                    <?php 
+                    
+                        wp_nav_menu( array(
+                            'theme_location' => 'links-menu'
+                        ) );
 
-                    <li><a href="#">Ποιοί Είμαστε</a></li>
-
-                    <li><a href="#">Ανακοινώσεις</a></li>
-
-                    <li><a href="#">Επικοινωνία</a></li>
+                    ?>
 
                 </ul>
 
@@ -34,30 +35,15 @@
 
                 <h3 class="ex-expanded-title-rotated-long">Ασφαλειες</h3>
 
-                
-
                 <ul>
-                    <li><h4>Υπηρεσίες</h4></li>
 
-                    <li class="ex-expanded-link"><a href="#">Αυτοκινητων</a></li>
+                    <?php 
                     
-                    <li class="ex-expanded-link"><a href="#">Πυρος</a></li>
-                    
-                    <li class="ex-expanded-link"><a href="#">αστικης ευθυνης</a></li>
-                    
-                    <li class="ex-expanded-link"><a href="#">επιχειρησεων</a></li>
-                    
-                    <li class="ex-expanded-link"><a href="#">προσωπικο</a></li>
-                    
-                    <li class="ex-expanded-link"><a href="#">ατυχημα</a></li>
-                    
-                    <li class="ex-expanded-link"><a href="#">ζωησ / υγειας</a></li>
-                    
-                    <li class="ex-expanded-link"><a href="#">αποταμιευσης / συνταξιοδοτησης</a></li>
-                    
-                    <li class="ex-expanded-link"><a href="#">μεταφορων</a></li>
-                    
-                    <li class="ex-expanded-link"><a href="#">ταξιδιωτικες</a></li>                    
+                        wp_nav_menu( array(
+                            'theme_location' => 'services-menu'
+                        ) );
+
+                    ?>
 
                 </ul>
 
@@ -69,32 +55,35 @@
 
                 <div>
 
-                    <div class="ex-expanded-address">
-                        <p>2ας Νοεμβρίου 101</p>
+                    <?php while ( have_posts() ) : the_post(); ?>
 
-                        <p>Βόλος Τ.Κ. 38333</p>
+                    <div class="ex-expanded-address">
+                        
+                        <p><?php the_field('address');?></p>
 
                     </div>
 
                     <div class="ex-expanded-tel">
 
-                        <p><span>Τ: </span>24210 37540</p>
+                        <p><span>Τ: </span><?php the_field('tel'); ?></p>
 
-                        <p><span>F: </span>24210 37541</p>
+                        <p><span>F: </span><?php the_field('fax'); ?></p>
 
-                        <p><span>E: </span>info@exelixis-ins.gr</p>
+                        <p><span>E: </span><?php the_field('email'); ?></p>
 
                     </div>
 
                     <div class="ex-expanded-social-icons">
 
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="<?php the_field('facebook_link'); ?>"><i class="fab fa-facebook-f"></i></a>
 
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="<?php the_field('twitter_link'); ?>"><i class="fab fa-twitter"></i></a>
 
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="<?php the_field('linkedin_link'); ?>"><i class="fab fa-linkedin-in"></i></a>
 
                     </div>
+
+                    <?php endwhile; ?>
 
                 </div>
 

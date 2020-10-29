@@ -38,7 +38,7 @@ add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 
 
 
-function services_custom_post_type() {
+function ex_services_custom_post_type() {
 
     $args = array(
 
@@ -58,4 +58,23 @@ function services_custom_post_type() {
 
 }
 
-add_action( 'init', 'services_custom_post_type' );
+add_action( 'init', 'ex_services_custom_post_type' );
+
+
+function ex_custom_excerpt_length( $length ) {
+    return 35;
+}
+add_filter( 'excerpt_length', 'ex_custom_excerpt_length', 999 );
+
+
+// Menus
+
+register_nav_menus( 
+
+    array(
+        'links-menu' => 'Links Menu',
+        'services-menu' => 'Services Menu',
+        'mobile-menu' => 'Mobile Menu'
+    )
+
+);
