@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+html {
+    overflow-x: hidden;
+}
+
 // Reset Styles
 * {
     margin: 0;
@@ -40,60 +44,82 @@ a:hover { text-decoration: none; }
 }
 
 
-.navbar-on-scroll {
-    position: fixed;
-    top: 0 !important;
-    min-width: 100% !important;
-    margin: 0 !important;
-    background: $primary !important;
-    z-index: 200;
-    .ex-logo {
-        display: inline-block;
-        a {
-            margin-left: 45px !important;
-            img {
-                width: 80px !important;
-                height: 80px !important;
+// Translate Press Style
+#menu-item-176 { margin-right: 15px; }
+
+
+.secondary-lang {
+        ul {
+            list-style-type: none;
+            display: flex;
+
+            li {
+                a {
+                    color: #fff;
+                    margin-right: 15px;
+                    span { font-family: $font-secondary; }
+                }
             }
         }
-        font-size: 2.5em;
-        color: $light-grey;
-        text-transform: lowercase;
-        font-weight: 600;
-
-        .ex-letters-logo {
-            display: none;
-        }
-    }
-
-    ul {
-        display: flex;
-        list-style-type: none;
-        margin-bottom: 0;
-
-        .lang-selector {
-            margin-right: 20px;
-        }
-
-        .ex-links {
-            font-family: $font-secondary;
-            margin: 0 45px;
-            color: #fff !important;
-            i {
-                cursor: pointer;
-            }
-            a {
-                margin-left: 25px;
-            }
-        }
-
-        span {
-            font-family: $font-secondary;
-            color: #fff !important;
-        }
-    }   
 }
 
+
+
+@media (min-width: 1200px) {
+    .navbar-on-scroll {
+        position: fixed;
+        top: 0 !important;
+        min-width: 100% !important;
+        margin: 0 !important;
+        background: $primary !important;
+        z-index: 200;
+        .ex-logo {
+            display: inline-block;
+            a {
+                margin-left: 45px !important;
+                img {
+                    width: 80px !important;
+                    height: 80px !important;
+                }
+            }
+            font-size: 2.5em;
+            color: $light-grey;
+            text-transform: lowercase;
+            font-weight: 600;
+
+            .ex-letters-logo {
+                display: none;
+            }
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            margin-bottom: 0;
+
+            .lang-selector {
+                margin-right: 20px;
+            }
+
+            .ex-links {
+                font-family: $font-secondary;
+                margin: 0 45px;
+                color: #fff !important;
+                i {
+                    cursor: pointer;
+                }
+                a {
+                    margin-left: 25px;
+                }
+            }
+
+            span {
+                font-family: $font-secondary;
+                color: #fff !important;
+            }
+        }   
+    }
+}
 
 .ex-nav {
     display: flex;
@@ -159,6 +185,14 @@ a:hover { text-decoration: none; }
     background-size: contain;
     background-position: bottom left;
 }
+
+// Secondary nav
+.ex-nav-secondary {
+    position: fixed;
+    min-width: 100%;
+    z-index: 100;
+}
+
 // Intro
 
 .intro-section {
@@ -218,35 +252,38 @@ a:hover { text-decoration: none; }
     .ex-btn-about {
         background: $primary;
         color: #fff;
-        padding: 25px 30px;
+        padding: 10px 20px;
         display: inline;
-        width: 300px;
-        height: 75px;
         position: absolute;
         bottom: 25%;
         left: 35%;
-        z-index: 5;
-        transition: all ease-in-out 250ms;
-        cursor: pointer;
+        z-index: 4;
+        overflow: hidden;
         a {
             text-transform: uppercase;
             color: #fff;
+            padding: 20px 50px;
+            font-size: 1.3em;
+            font-family: $font-secondary;
             &:hover {
                 color: #fff;
                 text-decoration: none;
+
+                &:hover .btn-img-arrow {
+                    transform: translateX(55px);
+                    transition: all ease-in-out 200ms;
+                }
             }
         }
         .btn-img-arrow {
-            margin-right: 10px;
-            margin-bottom: 3px;
-            width: 80px;
-            height: 100%;
+            height: 20px;
+            position: absolute;
+            left: 0;
+            transform: translatex(-300px);
+            margin-top: 5px;
         }
 
-        &:hover .btn-img-arrow {
-            transform: translateX(140px);
-            transition: all ease-in-out 250ms;
-        }
+
     }
 }
 
@@ -263,15 +300,14 @@ a:hover { text-decoration: none; }
     }
 
     .ex-services-item {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 600px;
+
+        & > div {
+            margin-top: 3.5em;
+        }
 
         h3 {
             color: $primary;
             text-transform: uppercase;
-            
         }
 
         a:hover .services-arrow { 
@@ -281,7 +317,7 @@ a:hover { text-decoration: none; }
         .services-arrow {
             visibility: hidden;
             opacity: 0;
-            transition: all ease-in-out 250ms;
+            transition: all ease-in-out 200ms;
             max-width: 75px;
             margin: 0 auto;
         }
@@ -293,44 +329,41 @@ a:hover { text-decoration: none; }
     opacity: 1;
 }
 
-.btn-wrapper {
-    position: relative;
-}
 
-.btn-more-services {
-    text-transform: uppercase;
-    display: block;
-    margin: 0 auto;
-    overflow: hidden;
-    justify-content: center;
-    width: 340px;
-    position: absolute;
-    bottom: -140px;
-    background: $primary;
-    padding: 20px 0;
+.btn-s-wrapper {
+    @extend .btn-blog-all;
+
     a {
-        color: #fff;
-        position: relative;
-        z-index: 2;
-        font-size: 1.1em;
-    }
-    .btn-services-arrow {
-        width: 280px;
-        margin-left: -280px;
-        margin-bottom: 5px;
-        position: relative;
-        z-index: 1;
-    }
+        font-family: $font-secondary;
+        &:hover .btn-blog-all-arrow {
+            transform: translate(40px) !important;
+        }
 
-    &:hover .btn-services-arrow {
-        transform: translateX(260px);
-        transition: all ease-in-out 250ms;
     }
 }
 
+.btn-b-home {
+    @extend .btn-s-wrapper;
+    cursor: initial !important;
+
+    a {
+        background-color: transparent !important;
+        color: $dark-grey !important;
+
+        &:hover .btn-b-home-arrow {
+            transform: translateX(25px) !important;
+        }
+
+        .btn-b-home-arrow {
+            @extend .btn-blog-all-arrow;
+            transform: translatex(400px) !important;
+            height: 24px !important;
+            margin-top: 3px !important;
+        }
+    }
+}
 
 // Banners
-
 .ex-banners {
     margin-top: -120px;
 }
@@ -340,7 +373,7 @@ a:hover { text-decoration: none; }
 .banner-item-watt {
     width: 700px;
     height: 245px;
-    transition: all ease-in-out 250ms;
+    transition: all ease-in-out 200ms;
 }
 
 .banner-item-spitogatos {
@@ -351,7 +384,7 @@ a:hover { text-decoration: none; }
     transform: translateX(-60px);
     position: relative;
     z-index: 1;
-    transition: all ease-in-out 250ms;
+    transition: all ease-in-out 200ms;
     text-align: center;
 }
 
@@ -376,7 +409,7 @@ a:hover { text-decoration: none; }
     transform-origin: center;
     position: relative;
     z-index: 2;
-    transition: all ease-in-out 250ms;
+    transition: all ease-in-out 200ms;
     text-align: center;
 
 }
@@ -536,7 +569,7 @@ a:hover { text-decoration: none; }
     display: flex;
     align-items: center;
     overflow: hidden;
-    width: 50%;
+    // width: 50%;
     &:hover .ex-read-more-arrow {
         transform: translateX(-40px);
     }
@@ -546,7 +579,7 @@ a:hover { text-decoration: none; }
         transform: translateX(-500px);
         position: relative;
         z-index: 1;
-        transition: all ease-in-out 250ms;
+        transition: all ease-in-out 200ms;
     }
 
     .ex-btn-more-grey {
@@ -573,10 +606,11 @@ a:hover { text-decoration: none; }
         text-transform: uppercase;
         overflow: hidden;
         font-size: 1.3em;
+        font-family: $font-secondary;
 
         &:hover .btn-blog-all-arrow {
-            transform: translateX(30px);
-            transition: all ease-in-out 250ms;
+            transform: translateX(20px);
+            transition: all ease-in-out 200ms;
         }
     }
     .btn-blog-all-arrow {
@@ -658,7 +692,7 @@ footer {
             font-family: $font-secondary;
             &:hover .btn-blog-all-arrow {
                 transform: translateX(37px);
-                transition: all ease-in-out 250ms;
+                transition: all ease-in-out 200ms;
             }
         }
         .btn-blog-all-arrow {
@@ -700,9 +734,13 @@ footer {
 .ex-footer-social-icons {
 
     a {
+        transition: all ease-in-out 200ms;
         color: #fff;
         &:nth-child(2) {
             margin: 0 25px;
+        }
+        &:hover {
+            color: $primary;
         }
     }   
 }
@@ -732,7 +770,7 @@ footer {
     z-index: -999;
     background-color: #fff;
     min-width: 100%;
-    transition: all ease-in-out 250ms;
+    transition: all ease-in-out 200ms;
     opacity: 0;
     overflow: hidden;
 
@@ -792,7 +830,7 @@ footer {
 
     .ex-expanded-title-rotated-long {
         @extend .ex-expanded-title-rotated;
-        left: -5%;
+        left: -20%;
         top: 80%;
     }
 
@@ -837,7 +875,7 @@ footer {
 
 
 .services-wrapper {
-    height: 1500px;
+    margin-bottom: 3.5em;
 }
 
 .ex-sec-links {
@@ -889,7 +927,7 @@ footer {
     a {
         color: $dark-grey;
         text-transform: capitalize;
-        transition: all ease-in-out 250ms;
+        transition: all ease-in-out 200ms;
         &:hover {
             color: $primary;
         }
@@ -925,7 +963,7 @@ footer {
 }
 
 .services {
-    padding: 100px 0;
+    padding: 150px 0;
     font-size: 3.5em;
     color: $primary;
     font-weight: 600;
@@ -958,7 +996,7 @@ footer {
     .service-item-img-wrapper {
 
         img {
-            max-height: 280px;
+            max-height: 350px;
         }
     }
 }

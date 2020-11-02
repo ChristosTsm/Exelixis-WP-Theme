@@ -20,9 +20,9 @@ $home_page = 35;
 
                     <div class="ex-footer-img-text">
 
-                        <h3>Είμαστε στη διάθεση σας</h3>
+                        <h3><?php _e('Είμαστε στη διάθεση σας', 'exelixis-circus') ?></h3>
 
-                        <p><?php the_field('footer_banner_text', $home_page); ?></p>
+                        <p><?php _e(the_field('footer_banner_text', $home_page), 'exelixis-circus'); ?></p>
 
                     </div>
 
@@ -34,7 +34,7 @@ $home_page = 35;
 
                         <img class="btn-blog-all-arrow btn-contact-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/footer-arrow-long.svg' ?>" alt="όλες οι υπηρεσίες" >
 
-                        Φορμα επικοινωνιας
+                        <?php _e('Φορμα επικοινωνιας', 'exelixis-circus'); ?>
 
                     </a>
 
@@ -46,27 +46,27 @@ $home_page = 35;
 
                 <div class="ex-footer-address">
 
-                    <p><?php the_field('address', $home_page); ?></p>
+                    <p><?php _e(the_field('address', $home_page), 'exelixis-circus'); ?></p>
 
                 </div>
 
                 <div class="ex-footer-tel">
 
-                    <p><span>Τ: </span><?php the_field('tel', $home_page); ?></p>
+                    <p><span>Τ: </span><?php _e(get_field('tel', $home_page), 'exelixis-circus'); ?></p>
 
-                    <p><span>F: </span><?php the_field('fax', $home_page); ?></p>
+                    <p><span>F: </span><?php _e(get_field('fax', $home_page), 'exelixis-circus'); ?></p>
 
-                    <p><span>E: </span><?php the_field('email', $home_page); ?></p>
+                    <p><span>E: </span><?php _e(get_field('email', $home_page), 'exelixis-circus'); ?></p>
 
                 </div>
 
                 <div class="ex-footer-social-icons">
 
-                    <a href="<?php the_field('facebook_link', $home_page); ?>"><i class="fab fa-facebook-f"></i></a>
+                    <a href="<?php _e(the_field('facebook_link', $home_page), 'exelixis-circus'); ?>"><i class="fab fa-facebook-f"></i></a>
 
-                    <a href="<?php the_field('twitter_link', $home_page); ?>"><i class="fab fa-twitter"></i></a>
+                    <a href="<?php _e(the_field('twitter_link', $home_page), 'exelixis-circus'); ?>"><i class="fab fa-twitter"></i></a>
 
-                    <a href="<?php the_field('linkedin_link', $home_page); ?>"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="<?php _e(the_field('linkedin_link', $home_page), 'exelixis-circus'); ?>"><i class="fab fa-linkedin-in"></i></a>
 
                 </div>
 
@@ -76,7 +76,7 @@ $home_page = 35;
 
         <div class="ex-copyrights">
 
-            <p>Circus Design Studio for Exelixis &copy; 2020 - 2020</p>
+            <p>Circus Design Studio for Exelixis &copy; 2020 - 2021</p>
 
         </div>
 

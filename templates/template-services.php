@@ -1,8 +1,5 @@
 <?php 
-/**
- * 
- * Output the title with an excerpt.
- */
+
 $args = array(  
     'post_type' => 'services',
     'post_status' => 'publish',
@@ -47,5 +44,17 @@ get_header('secondary');
         </div>
 
     <?php endwhile; ?>
+
+    <div class="btn-b-home col-md-4 justify-content-center align-content-center">
+    
+            <a href="/">
+            
+                <?php _e('Επιστροφη στην αρχικη', 'exelixis-circus'); ?>
+            
+                <img class=" btn-b-home-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/ipiresies-archive-arrow.svg' ?>" alt="Επιστροφή στην αρχικη">
+
+            </a>
+
+    </div>
 
 </div>

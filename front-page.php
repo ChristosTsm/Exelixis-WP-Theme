@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<?php  get_template_part( 'includes/header', 'content' ); ?>
-
 <?php while ( have_posts() ) : the_post(); ?>
 
 <section class="intro-section">
@@ -17,13 +15,13 @@
 
         </div>
 
-        <div class="ex-portrait">
+        <div class="ex-portrait" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
 
             <div class="inner-info">
 
-                <h2>Ποιοί είμαστε</h2>
+                <h2  data-aos="fade-in" data-aos-delay="500"><?php _e('Ποιοί είμαστε' , 'exelixis-circus'); ?></h2>
 
-                <p><?php the_field('poioi_eimaste'); ?></p>
+                <p  data-aos="fade-in" data-aos-delay="550"><?php _e(get_field('poioi_eimaste'), 'exelixis-circus'); ?></p>
 
                 <img src="<?php echo get_stylesheet_directory_uri() . '/assets/idrogeios.png' ?>" alt="Υδρόγειος">
 
@@ -31,18 +29,18 @@
 
         </div>
 
-        <div class="ex-btn-about">
+        <div class="ex-btn-about" data-aos="fade-right" data-aos-delay="650">
 
             <a class="ex-btn-link" href="#">
 
-                <img class="btn-img-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/btn-arrow.png' ?>" alt="About us">
+                <img class="btn-img-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/perissotera-arrow.svg' ?>" alt="About us">
 
-                Περισσοτερα
+                <?php _e('Περισσοτερα', 'exelixis-circus'); ?>
 
             </a>  
 
         </div>
-
+        
     </div>
 
 </section>
@@ -50,81 +48,18 @@
 
 <section class="services-section">
 
-    <div class="ex-ml ex-mr">
-
-        <h1><i>Οι Υπηρεσίες μας</i></h1>
-
-        <div class="d-flex d-flex-mobile align-items-center justify-content-between align-content-center">
-
-
-            <div class="ex-services-item">
-
-                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/aytokinito-services.png' ?>" alt="Ασφάλεια αυτοκινήτου">
-
-                <div>
-
-                    <h3 class="services-link"><a href="#">Ασφαλεια<br>αυτοκινητου</a></h3>
-
-                    <img class="services-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/ipiresies-arrow.png' ?>" alt="ασφαλεια αυτοκινητου">
-
-                </div>
-
-            </div>
-
-            <div class="ex-services-item btn-wrapper">
-
-                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/piros.png' ?>" alt="Ασφάλεια πυρός">
-
-                <div>
-
-                    <h3 class="services-link"><a href="#">Ασφαλεια<br>πυρος</a></h3>
-
-                    <img class="services-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/ipiresies-arrow.png' ?>" alt="ασφαλεια πυρος">
-
-                </div>
-
-                <div class="btn-more-services">
-
-                    <img class="btn-services-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/services-arrow.svg' ?>" alt="Περισσότερες Υπηρεσίες" >
-
-                    <a href="<?php echo esc_url( get_page_link( 76 ) ); ?>">Περισσοτερες υπηρεσιες</a>
-
-                </div>
-
-            </div>
-
-
-            <div class="ex-services-item">
-
-                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/astiki-euthini.png' ?>" alt="Ασφαλεια αστικης ευθυνης">
-
-                <div>
-
-                    <h3 class="services-link"><a href="#">Ασφαλεια<br>αστικης ευθυνης</a></h3>
-
-                    <img class="services-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/ipiresies-arrow.png' ?>" alt="Ασφαλεια αστικης ευθυνης">
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
+    <?php get_template_part('includes/home','services'); ?>
   
-
 </section>
 
 
 <section class="mobile-hidden">
 
-    <section class="ex-banners d-flex-mobile d-flex justify-content-center">
+    <div class="ex-banners d-flex-mobile d-flex justify-content-center">
 
         <div id="watt" class="banner-item-watt">
 
-            <p class="ex-banner-title">Επισημοι συνεργατες της</p>
+            <p class="ex-banner-title"><?php _e('Επισημοι συνεργατες της','exelixis-circus'); ?></p>
 
             <a href="https://www.watt-volt.gr/">
 
@@ -136,7 +71,7 @@
 
         <div id="spitogatos" class="banner-item-spitogatos">
 
-            <p class="ex-banner-title">τα ακινητα που διαχειριζομαστε</p>
+            <p class="ex-banner-title"><?php _e('τα ακινητα που διαχειριζομαστε','exelixis-circus'); ?></p>
 
             <a href="https://www.spitogatos.gr/">
 
@@ -146,7 +81,7 @@
 
         </div>
 
-    </section>
+    </div>
     
 </section>
 
@@ -154,7 +89,7 @@
 
     <div id="watt" class="banner-item-watt">
 
-        <p class="ex-banner-title">Επισημοι συνεργατες της</p>
+        <p class="ex-banner-title"><?php _e('Επισημοι συνεργατες της', 'exelixis-circus'); ?></p>
 
         <a href="https://www.watt-volt.gr/">
 
@@ -166,7 +101,7 @@
 
     <div id="spitogatos" class="banner-item-spitogatos">
 
-        <p class="ex-banner-title">τα ακινητα που διαχειριζομαστε</p>
+        <p class="ex-banner-title"><?php _e('τα ακινητα που διαχειριζομαστε', 'exelixis-circus'); ?></p>
 
         <a href="https://www.spitogatos.gr/">
 
@@ -181,47 +116,47 @@
 
 <section class="ex-pleonektimata ex-ml ex-mr">
 
-    <h1>Τα πλεονεκτήματα μας</h1>
+    <h1><?php _e('Τα πλεονεκτήματα μας','exelixis-circus'); ?></h1>
 
     <div class="ex-pleonektimata-banners">
 
-        <div class="ex-pleonektimata-item">
+        <div class="ex-pleonektimata-item"  data-aos="fade-up">
 
             <img class="ex-p-number" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-number-1.svg' ?>" alt="1">
 
             <img class="ex-p-image" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-1.png' ?>" alt="πλεονεκτήματα εξέλιξις">  
 
-            <p><?php the_field('pleonektimata_1'); ?></p>
+            <p><?php _e(the_field('pleonektimata_1'), 'exelixis-circus'); ?></p>
 
         </div>
 
-        <div class="ex-pleonektimata-item">
+        <div class="ex-pleonektimata-item"  data-aos="fade-up" data-aos-delay="500">
 
             <img class="ex-p-number" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-number-2.svg' ?>" alt="2">
 
             <img class="ex-p-image" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-2.png' ?>" alt="πλεονεκτήματα εξέλιξις"> 
 
-            <p><?php the_field('pleonektimata_2'); ?></p>
+            <p><?php _e(the_field('pleonektimata_2'), 'exelixis-circus'); ?></p>
 
         </div>
 
-        <div class="ex-pleonektimata-item">
+        <div class="ex-pleonektimata-item"  data-aos="fade-up" data-aos-delay="1200">
 
             <img class="ex-p-number" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-number-3.svg' ?>" alt="3">
 
             <img class="ex-p-image" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-3.png' ?>" alt="πλεονεκτήματα εξέλιξις"> 
 
-            <p><?php the_field('pleonektimata_3'); ?></p>
+            <p><?php _e(the_field('pleonektimata_3'), 'exelixis-circus'); ?></p>
 
         </div>
 
-        <div class="ex-pleonektimata-item">
+        <div class="ex-pleonektimata-item"  data-aos="fade-up" data-aos-delay="1300">
 
             <img class="ex-p-number" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-number-4.svg' ?>" alt="4">
 
             <img class="ex-p-image" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-4.png' ?>" alt="πλεονεκτήματα εξέλιξις">
 
-            <p><?php the_field('pleonektimata_4'); ?></p>
+            <p><?php _e(the_field('pleonektimata_4'),'exelixis-circus'); ?></p>
 
         </div>
 

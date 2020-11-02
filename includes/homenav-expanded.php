@@ -1,3 +1,9 @@
+<?php
+
+$home_page = 35;
+
+?>
+
 <section class="ex-expanded-navigation ex-hidden">
 
     <i id="ex-close-menu" class="fas fa-times close-expanded-menu-icon"></i>
@@ -12,12 +18,9 @@
 
             </div>
 
-            <div class="col-sm d-flex justify-content-center ex-expanded-col-wrapper">
+            <div class="col-sm d-flex justify-content-start justify-content-md-center ex-expanded-col-wrapper">
 
                 <h3 class="ex-expanded-title-rotated">Μενου</h3>
-
-
-                <ul>
 
                     <?php 
                     
@@ -27,15 +30,11 @@
 
                     ?>
 
-                </ul>
-
             </div>
 
-            <div class="col-sm d-flex justify-content-center ex-expanded-col-wrapper">
+            <div class="col-sm d-flex justify-content-start justify-content-md-center ex-expanded-col-wrapper">
 
                 <h3 class="ex-expanded-title-rotated-long">Ασφαλειες</h3>
-
-                <ul>
 
                     <?php 
                     
@@ -45,8 +44,6 @@
 
                     ?>
 
-                </ul>
-
             </div>
 
             <div class="col-sm d-flex ex-expanded-info-wrapper">
@@ -55,35 +52,31 @@
 
                 <div>
 
-                    <?php while ( have_posts() ) : the_post(); ?>
-
                     <div class="ex-expanded-address">
                         
-                        <p><?php the_field('address');?></p>
+                        <p><?php _e(get_field('address', $home_page), 'exelixis-circus');?></p>
 
                     </div>
 
                     <div class="ex-expanded-tel">
 
-                        <p><span>Τ: </span><?php the_field('tel'); ?></p>
+                        <p><span>Τ: </span><?php _e(get_field('tel', $home_page), 'exelixis-circus'); ?></p>
 
-                        <p><span>F: </span><?php the_field('fax'); ?></p>
+                        <p><span>F: </span><?php _e(get_field('fax', $home_page), 'exelixis-circus'); ?></p>
 
-                        <p><span>E: </span><?php the_field('email'); ?></p>
+                        <p><span>E: </span><?php _e(get_field('email', $home_page), 'exelixis-circus'); ?></p>
 
                     </div>
 
                     <div class="ex-expanded-social-icons">
 
-                        <a href="<?php the_field('facebook_link'); ?>"><i class="fab fa-facebook-f"></i></a>
+                        <a href="<?php the_field('facebook_link', $home_page); ?>"><i class="fab fa-facebook-f"></i></a>
 
-                        <a href="<?php the_field('twitter_link'); ?>"><i class="fab fa-twitter"></i></a>
+                        <a href="<?php the_field('twitter_link', $home_page); ?>"><i class="fab fa-twitter"></i></a>
 
-                        <a href="<?php the_field('linkedin_link'); ?>"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="<?php the_field('linkedin_link', $home_page); ?>"><i class="fab fa-linkedin-in"></i></a>
 
                     </div>
-
-                    <?php endwhile; ?>
 
                 </div>
 
@@ -92,7 +85,5 @@
         </div>
 
     </div>
-
-
 
 </section>

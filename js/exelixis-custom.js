@@ -50,8 +50,6 @@ function closeMegaMenu() {
 
 
 let navbar = document.getElementById('home-nav');
-// let logo = document.querySelector('.ex-logo');
-// let lettersLogo = document.querySelector('.ex-letters-logo');
 
 window.onscroll = function() {navScrollFunction()};
 
@@ -62,3 +60,8 @@ function navScrollFunction() {
     navbar.classList.remove('navbar-on-scroll');
   }
 }
+
+AOS.init({
+  mirror: true,
+  duration: 1000
+});

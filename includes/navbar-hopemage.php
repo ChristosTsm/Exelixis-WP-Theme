@@ -1,3 +1,9 @@
+
+<?php global $wp;
+$current_url = home_url( add_query_arg( array(), $wp->request ) );
+?>
+
+
 <nav class="ex-nav">
 
 <div class="ex-logo">
@@ -16,9 +22,19 @@
 
     <li class="ex-links"><span class="ex-active">T:</span> 24210 37540</li>
 
-    <li class="ex-links"><span class="ex-active lang-selector">EL</span> EN</li>
+    <li class="ex-sec-links">
 
-    <li class="ex-links">ΜΕΝΟΥ <i id='ex-open-menu' class="fas fa-bars"></i></li>
+        <?php 
+
+            wp_nav_menu( array(
+                'theme_location' => 'lang-menu'
+            ) );
+
+        ?>
+
+    </li>
+
+    <li class="ex-links"><?php _e('ΜΕΝΟΥ','exelixis-circus'); ?> <i id='ex-open-menu' class="fas fa-bars"></i></li>
 
 </ul>
 

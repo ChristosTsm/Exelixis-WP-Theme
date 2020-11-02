@@ -1,0 +1,102 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Exelixis - Circus Design Studio\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-30 13:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.4.4; wp-5.5.2"
+
+#. Author of the theme
+msgid "Christos Tsamis"
+msgstr ""
+
+#. Name of the theme
+msgid "Exelixis - Circus Design Studio"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://github.com/ChristosTsm/"
+msgstr ""
+
+#. URI of the theme
+msgid "https://www.understrap.com"
+msgstr ""
+
+#. Description of the theme
+msgid "UnderStrap Child Theme"
+msgstr ""
+
+#: includes/homeposts-content.php:7
+msgid "Ανακοινώσεις"
+msgstr "Our Blog"
+
+#: includes/home-services.php:43
+msgid "Ασφαλεια<br>αστικης ευθυνης"
+msgstr ""
+
+#: includes/home-services.php:15
+msgid "Ασφαλεια<br>αυτοκινητου"
+msgstr "Car Insurance"
+
+#: includes/home-services.php:29
+msgid "Ασφαλεια<br>πυρος"
+msgstr "Fire Insurance"
+
+#: footer.php:23
+msgid "Είμαστε στη διάθεση σας"
+msgstr "For any inquires"
+
+#: front-page.php:62 front-page.php:92
+msgid "Επισημοι συνεργατες της"
+msgstr "Official Partners"
+
+#: includes/homenav-content.php:26 includes/navbar-hopemage.php:21
+#: includes/pagenav.php:9
+msgid "ΜΕΝΟΥ"
+msgstr "Menu"
+
+#: includes/home-services.php:5
+msgid "Οι Υπηρεσίες μας"
+msgstr "Our Services"
+
+#: includes/homeposts-content.php:123
+msgid "Ολες οι ανακοινωσεις"
+msgstr "More"
+
+#: front-page.php:38 includes/homeposts-content.php:51
+#: includes/homeposts-content.php:101 includes/homeposts-content.php:103
+msgid "Περισσοτερα"
+msgstr "More"
+
+#: includes/home-services.php:60
+msgid "Περισσοτερες υπηρεσιες"
+msgstr "More Services"
+
+#: front-page.php:22
+msgid "Ποιοί είμαστε"
+msgstr "About Us"
+
+#: front-page.php:119
+msgid "Τα πλεονεκτήματα μας"
+msgstr "Advantages"
+
+#: footer.php:37
+msgid "Φορμα επικοινωνιας"
+msgstr "Contact Form"
+
+#: front-page.php:74 front-page.php:104
+msgid "τα ακινητα που διαχειριζομαστε"
+msgstr "Properties we manage"
+
+#: includes/homeposts-content.php:121
+msgid "όλες οι ανακοινώσεις"
+msgstr "All blog posts"

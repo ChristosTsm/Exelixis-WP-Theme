@@ -1,5 +1,16 @@
 <?php get_template_part('includes/homenav','expanded');?>
 
+<?php global $wp;
+$current_url = home_url( add_query_arg( array(), $wp->request ) );
+
+
+$eng_url = home_url( add_query_arg( array() , $wp->request ) );
+
+$gr_url = home_url( remove_query_arg(  array() , $wp->request ) );
+
+
+?>
+
 <header class="ex-header">
 
     <?php while ( have_posts() ) : the_post(); ?>
@@ -21,9 +32,19 @@
 
             <li class="ex-links mobile-hidden"><span class="ex-active">T:</span> <?php the_field('tel') ?></li>
 
-            <li class="ex-links"><span class="ex-active lang-selector">EL</span> EN</li>
+            <li class="ex-sec-links">
 
-            <li class="ex-links"><span class="mobile-hidden">ΜΕΝΟΥ</span> <i id='ex-open-menu' class="fas fa-bars"></i></li>
+                <?php 
+                
+                    wp_nav_menu( array(
+                        'theme_location' => 'lang-menu'
+                    ) );
+
+                ?>
+            
+            </li>
+
+            <li class="ex-links"><span class="mobile-hidden"><?php _e('ΜΕΝΟΥ','exelixis-circus'); ?></span> <i id='ex-open-menu' class="fas fa-bars"></i></li>
 
         </ul>
 
@@ -34,7 +55,7 @@
         <h1>
             <i>
 
-            <?php the_field('banner_text'); ?>
+            <?php _e(the_field('banner_text'), 'exelixis-circus'); ?>
 
             </i> 
             
@@ -43,7 +64,7 @@
     </div>
 
     <?php endwhile; ?>
-
+    
+    <div class="arrow"></div>
 </header>
 
-<div class="arrow"></div>
