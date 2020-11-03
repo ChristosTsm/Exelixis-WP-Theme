@@ -7,4 +7,4 @@
 </head>
 <body>
 
-<?php get_template_part('includes/pagenav');?>
+<?php get_template_part('includes/page','navigation');?>

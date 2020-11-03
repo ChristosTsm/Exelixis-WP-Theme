@@ -1,8 +1,4 @@
-<?php get_template_part('includes/homenav','expanded');?>
-
-<?php global $wp;
-$current_url = home_url( add_query_arg( array(), $wp->request ) );
-?>
+<?php get_template_part('includes/home','nav-expanded');?>
 
 <nav class="d-flex justify-content-between ex-navbar-secondary align-items-center ex-nav-secondary">
 

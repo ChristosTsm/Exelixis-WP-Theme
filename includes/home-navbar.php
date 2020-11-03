@@ -1,4 +1,4 @@
-<?php get_template_part('includes/homenav','expanded');?>
+<?php get_template_part('includes/home','nav-expanded');?>
 
 
 <header class="ex-header">

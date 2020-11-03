@@ -36,7 +36,7 @@
 </section>
 
 
-<?php  get_template_part( 'includes/homeposts', 'content' ); ?>
+<?php  get_template_part( 'includes/home', 'posts' ); ?>
 
 
 <section class="ex-map">
