@@ -12,7 +12,7 @@
 
                     <img src="<?php echo get_stylesheet_directory_uri() . '/assets/service-single-arrow.svg' ?>" alt="Επιστροφή στις υπηρεσίες">
 
-                    <a href="#">Επιστροφη στις ανακοινωσεις</a>
+                    <a href="#"><?php _e('Επιστροφη στις ανακοινωσεις','exelixis-circus'); ?></a>
 
                 </div>
 
@@ -21,9 +21,9 @@
             <div class="col-auto">
 
                 <div class="breadcrump">
-                    <a href="/">Αρχική</a><span>/</span>
-                    <a href="/anakoinwseis">Ανακοινώσεις</a><span>/</span>
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    <a href="/"><?php _e('Αρχική', 'exelixis-circus'); ?></a><span>/</span>
+                    <a href="/anakoinwseis"><?php _e('Ανακοινώσεις', 'exelixis-circus'); ?></a><span>/</span>
+                    <a href="<?php the_permalink(); ?>"><?php _e(the_title(), 'exelixis-circus'); ?></a>
                 </div>
 
             </div>
@@ -38,7 +38,7 @@
 
                 <?php if(has_post_thumbnail( )) : ?>
 
-                    <img class="single-post-img" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                    <img class="single-post-img" src="<?php the_post_thumbnail_url(); ?>" alt="<?php _e(the_title(), 'exelixis-circus'); ?>">
                 
                 <?php endif; ?>
 
