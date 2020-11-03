@@ -26,18 +26,18 @@ get_header('secondary');
 
                     <?php if(has_post_thumbnail( )) : ?>
 
-                    <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                    <img data-aos="fade-in" data-aos-duration="1500" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
 
                     <?php endif; ?>
 
                 </div>
 
 
-                <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+                <h1><a data-aos="fade-in" data-aos-duration="1500" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 
-                <hr>
+                <hr/>
 
-                <p><?php the_excerpt(); ?></p>
+                <p data-aos="fade-in" data-aos-duration="1500"><?php the_excerpt(); ?></p>
 
             </div>
 

@@ -1,15 +1,5 @@
 <?php get_template_part('includes/homenav','expanded');?>
 
-<?php global $wp;
-$current_url = home_url( add_query_arg( array(), $wp->request ) );
-
-
-$eng_url = home_url( add_query_arg( array() , $wp->request ) );
-
-$gr_url = home_url( remove_query_arg(  array() , $wp->request ) );
-
-
-?>
 
 <header class="ex-header">
 
@@ -65,6 +55,10 @@ $gr_url = home_url( remove_query_arg(  array() , $wp->request ) );
 
     <?php endwhile; ?>
     
-    <div class="arrow"></div>
+    <div class="arrow">
+
+        <?php echo file_get_contents( get_stylesheet_directory_uri() . '/assets/arrows-animating.svg' ); ?>                        
+    
+    </div>
 </header>
 

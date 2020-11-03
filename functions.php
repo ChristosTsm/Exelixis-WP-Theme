@@ -27,9 +27,7 @@ function theme_enqueue_styles() {
         wp_enqueue_script( 'comment-reply' );
     }
     wp_enqueue_script( 'fontawesome', 'https://kit.fontawesome.com/0e69954788.js', array(), false );
-    wp_enqueue_script( 'gsap-core' , 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js', array(), true );
-    wp_enqueue_script( 'gsap-mothion-path' , 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/MotionPathPlugin.min.js', array(), true );
-    wp_enqueue_script( 'aos-js', get_stylesheet_directory_uri() . '/js/aos.js',array(), $the_theme->get( 'Version' ), true );
+    wp_enqueue_script( 'aos-js', get_stylesheet_directory_uri() . '/js/aos.js',array(), true );
     wp_enqueue_script( 'exelixis-custom', get_stylesheet_directory_uri() . '/js/exelixis-custom.js', array(), $the_theme->get( 'Version' ), true );
 }
 

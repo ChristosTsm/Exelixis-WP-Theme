@@ -29,6 +29,7 @@ a:hover { text-decoration: none; }
     background-size: cover;
     padding-top: 30px;
     position: relative;
+    overflow: hidden;
 
     .ex-inner-text {
         margin-left: 126px;
@@ -39,6 +40,7 @@ a:hover { text-decoration: none; }
         z-index: 5;
         h1 {
             font-size: 5em;
+            font-weight: 600;
         }
     }
 }
@@ -177,13 +179,9 @@ a:hover { text-decoration: none; }
 .arrow { 
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: -3px;
     width: 100%;
     height: 80%;
-    background: url('../assets/arrow.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom left;
 }
 
 // Secondary nav
@@ -1043,5 +1041,39 @@ footer {
 
 .ex-blog-posts {
     background: $light-grey;
-    padding: 100px 0;
+    padding: 150px 0;
+}
+
+.not-found {
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background: $primary;
+
+    a,
+    h1,
+    h2 {
+        color: #fff;
+        font-family: $font-secondary;
+        font-size: 3.2em;
+    }
+
+    span,
+    a {
+        font-size: 1.2em;
+        opacity: 0.5;
+        transition: all ease-in-out 250ms;
+        display: inline-block;
+
+        &:hover {
+            color: #fff;
+            opacity: 1;
+        }
+    }
+    i {
+        margin-right: 15px;
+    }
+
 }

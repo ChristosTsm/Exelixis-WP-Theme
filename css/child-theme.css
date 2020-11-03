@@ -11648,7 +11648,8 @@ a:hover {
   background-position: center;
   background-size: cover;
   padding-top: 30px;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .ex-header .ex-inner-text {
     margin-left: 126px;
     font-family: 'NotoSerif', Arial, Helvetica, sans-serif;
@@ -11657,7 +11658,8 @@ a:hover {
     bottom: 20%;
     z-index: 5; }
     .ex-header .ex-inner-text h1 {
-      font-size: 5em; }
+      font-size: 5em;
+      font-weight: 600; }
 
 #menu-item-176 {
   margin-right: 15px; }
@@ -11763,13 +11765,9 @@ a:hover {
 .arrow {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: -3px;
   width: 100%;
-  height: 80%;
-  background: url("../assets/arrow.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: bottom left; }
+  height: 80%; }
 
 .ex-nav-secondary {
   position: fixed;
@@ -12445,7 +12443,39 @@ footer {
 
 .ex-blog-posts {
   background: #e6e6e6;
-  padding: 100px 0; }
+  padding: 150px 0; }
+
+.not-found {
+  min-height: 100vh;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background: #f37a21; }
+  .not-found a,
+  .not-found h1,
+  .not-found h2 {
+    color: #fff;
+    font-family: "IBM Plex Sans", arial;
+    font-size: 3.2em; }
+  .not-found span,
+  .not-found a {
+    font-size: 1.2em;
+    opacity: 0.5;
+    -webkit-transition: all ease-in-out 250ms;
+    transition: all ease-in-out 250ms;
+    display: inline-block; }
+    .not-found span:hover,
+    .not-found a:hover {
+      color: #fff;
+      opacity: 1; }
+  .not-found i {
+    margin-right: 15px; }
 
 /*
 * Use existing Bootstrap 4 classes and

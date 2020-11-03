@@ -30,24 +30,3 @@ $current_url = home_url( add_query_arg( array(), $wp->request ) );
     </ul>
 
 </nav>
-
-<script>
-
-    let open = document.getElementById('ex-open-menu');
-    let close = document.getElementById('ex-close-menu');
-    let menu = document.querySelector('.ex-expanded-navigation');
-
-    open.addEventListener("click", openMegaMenu);
-    close.addEventListener("click",closeMegaMenu);
-
-    function openMegaMenu() {
-        menu.classList.remove('ex-hidden');
-        menu.style.opacity = 1;
-        menu.style.zIndex = 999;
-    }
-
-    function closeMegaMenu() {
-        menu.style.opacity = 0;
-        menu.style.zIndex = -999;
-}
-</script>
