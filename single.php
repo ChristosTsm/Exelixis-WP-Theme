@@ -60,7 +60,7 @@
 
         <div class="single-post-content">
 
-            <h1 class="blog-single-title"><i><?php the_title(); ?></i></h1>
+            <h1 class="blog-single-title"><i><?php _e(the_title(), 'exelixis-circus'); ?></i></h1>
 
             <hr class="blog-single-hr">
 
@@ -70,7 +70,7 @@
 
                 <div class="col-md-10">
 
-                    <?php the_content(); ?>
+                    <?php _e(the_content(), 'exelixis-circus'); ?>
 
                 </div>
 
