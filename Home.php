@@ -31,13 +31,13 @@
 
                         <?php if(has_post_thumbnail()) : ?>
 
-                            <img class="ex-featured-post-img" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                            <img  data-aos="fade-in" data-aos-duration="1500" class="ex-featured-post-img" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
 
                         <?php endif; ?>
                         
                         <div class="featured-post-inner-text">
 
-                            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                            <h2><a  data-aos="fade-in" data-aos-duration="1500" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
                             <img class="ex-title-date-devider" src="<?php echo get_stylesheet_directory_uri() . '/assets/divider.svg' ?>" alt="post date devider">
 
@@ -85,13 +85,13 @@
 
                         <?php if(has_post_thumbnail()) : ?>
 
-                        <img class="ex-post-img" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                        <img  data-aos="fade-in" data-aos-duration="1500" class="ex-post-img" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
 
                         <?php endif; ?>
 
                         <div class="featured-post-inner-text">
 
-                            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                            <h2><a  data-aos="fade-in" data-aos-duration="1500" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
                             <img class="ex-title-date-devider-simple-post" src="<?php echo get_stylesheet_directory_uri() . '/assets/divider.svg' ?>" alt="post date devider">
 
@@ -142,13 +142,13 @@
 
                         <?php if(has_post_thumbnail()) : ?>
 
-                        <img class="ex-post-img" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                        <img  data-aos="fade-in" data-aos-duration="1500" class="ex-post-img" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
 
                         <?php endif; ?>
 
                         <div class="featured-post-inner-text">
 
-                            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                            <h2><a data-aos="fade-in" data-aos-duration="1500" data-aos-delay="300" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
                             <img class="ex-title-date-devider-simple-post" src="<?php echo get_stylesheet_directory_uri() . '/assets/divider.svg' ?>" alt="post date devider">
 

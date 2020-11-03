@@ -4,163 +4,34 @@
 
 <section class="intro-section">
 
-    <img class="ex-e-bg ex-ml" src="<?php echo get_stylesheet_directory_uri() . '/assets/e-bg-image.png' ?>" alt="Exelixis" >
-
-    <div class="d-flex ex-about-section container">
-
-
-        <div class="ex-landscape">
-
-            <img src="<?php echo get_stylesheet_directory_uri() . '/assets/img-landscape.png' ?>" alt="exelixis image" >
-
-        </div>
-
-        <div class="ex-portrait" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-
-            <div class="inner-info">
-
-                <h2  data-aos="fade-in" data-aos-delay="500"><?php _e('Ποιοί είμαστε' , 'exelixis-circus'); ?></h2>
-
-                <p  data-aos="fade-in" data-aos-delay="550"><?php _e(get_field('poioi_eimaste'), 'exelixis-circus'); ?></p>
-
-                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/idrogeios.png' ?>" alt="Υδρόγειος">
-
-            </div>
-
-        </div>
-
-        <div class="ex-btn-about" data-aos="fade-right" data-aos-delay="650">
-
-            <a class="ex-btn-link" href="#">
-
-                <img class="btn-img-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/perissotera-arrow.svg' ?>" alt="About us">
-
-                <?php _e('Περισσοτερα', 'exelixis-circus'); ?>
-
-            </a>  
-
-        </div>
-        
-    </div>
+    <?php get_template_part( 'includes/home','intro' ); ?>
 
 </section>
 
 
 <section class="services-section">
 
-    <?php get_template_part('includes/home','services'); ?>
+    <?php get_template_part( 'includes/home','services' ); ?>
   
 </section>
 
 
 <section class="mobile-hidden">
 
-    <div class="ex-banners d-flex-mobile d-flex justify-content-center">
-
-        <div id="watt" class="banner-item-watt">
-
-            <p class="ex-banner-title"><?php _e('Επισημοι συνεργατες της','exelixis-circus'); ?></p>
-
-            <a href="https://www.watt-volt.gr/">
-
-                <img class="ex-banner-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/wattvolt-logo.svg' ?>">
-
-            </a>
-
-        </div>
-
-        <div id="spitogatos" class="banner-item-spitogatos">
-
-            <p class="ex-banner-title"><?php _e('τα ακινητα που διαχειριζομαστε','exelixis-circus'); ?></p>
-
-            <a href="https://www.spitogatos.gr/">
-
-                <img class="ex-banner-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/spitogatos-logo.svg' ?>">
-
-            </a>
-
-        </div>
-
-    </div>
+    <?php get_template_part( 'includes/home','desktop-banners' ); ?>
     
 </section>
 
 <section class="d-flex-mobile desktop-hidden">
 
-    <div id="watt" class="banner-item-watt">
-
-        <p class="ex-banner-title"><?php _e('Επισημοι συνεργατες της', 'exelixis-circus'); ?></p>
-
-        <a href="https://www.watt-volt.gr/">
-
-            <img class="ex-banner-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/wattvolt-logo.svg' ?>">
-
-        </a>
-
-    </div>
-
-    <div id="spitogatos" class="banner-item-spitogatos">
-
-        <p class="ex-banner-title"><?php _e('τα ακινητα που διαχειριζομαστε', 'exelixis-circus'); ?></p>
-
-        <a href="https://www.spitogatos.gr/">
-
-            <img class="ex-banner-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/spitogatos-logo.svg' ?>">
-
-        </a>
-
-    </div>
+    <?php get_template_part( 'includes/home','mobile-banners' ); ?>
 
 </section>
 
 
 <section class="ex-pleonektimata ex-ml ex-mr">
 
-    <h1><?php _e('Τα πλεονεκτήματα μας','exelixis-circus'); ?></h1>
-
-    <div class="ex-pleonektimata-banners">
-
-        <div class="ex-pleonektimata-item"  data-aos="fade-up">
-
-            <img class="ex-p-number" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-number-1.svg' ?>" alt="1">
-
-            <img class="ex-p-image" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-1.png' ?>" alt="πλεονεκτήματα εξέλιξις">  
-
-            <p><?php _e(the_field('pleonektimata_1'), 'exelixis-circus'); ?></p>
-
-        </div>
-
-        <div class="ex-pleonektimata-item"  data-aos="fade-up" data-aos-delay="500">
-
-            <img class="ex-p-number" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-number-2.svg' ?>" alt="2">
-
-            <img class="ex-p-image" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-2.png' ?>" alt="πλεονεκτήματα εξέλιξις"> 
-
-            <p><?php _e(the_field('pleonektimata_2'), 'exelixis-circus'); ?></p>
-
-        </div>
-
-        <div class="ex-pleonektimata-item"  data-aos="fade-up" data-aos-delay="1200">
-
-            <img class="ex-p-number" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-number-3.svg' ?>" alt="3">
-
-            <img class="ex-p-image" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-3.png' ?>" alt="πλεονεκτήματα εξέλιξις"> 
-
-            <p><?php _e(the_field('pleonektimata_3'), 'exelixis-circus'); ?></p>
-
-        </div>
-
-        <div class="ex-pleonektimata-item"  data-aos="fade-up" data-aos-delay="1300">
-
-            <img class="ex-p-number" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-number-4.svg' ?>" alt="4">
-
-            <img class="ex-p-image" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-4.png' ?>" alt="πλεονεκτήματα εξέλιξις">
-
-            <p><?php _e(the_field('pleonektimata_4'),'exelixis-circus'); ?></p>
-
-        </div>
-
-    </div>
+    <?php get_template_part( 'includes/home','pleonektimata' ); ?>
 
 </section>
 
