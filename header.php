@@ -9,4 +9,4 @@
 
 <?php wp_body_open(); ?>
 
-<?php get_template_part('includes/home','navbar');?>
+<?php get_template_part('partials/home','navbar');?>

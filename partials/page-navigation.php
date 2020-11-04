@@ -1,4 +1,4 @@
-<?php get_template_part('includes/home','nav-expanded');?>
+<?php get_template_part('partials/home','nav-expanded');?>
 
 <nav class="d-flex justify-content-between ex-navbar-secondary align-items-center ex-nav-secondary">
 

@@ -4,39 +4,39 @@
 
 <section class="intro-section">
 
-    <?php get_template_part( 'includes/home','intro' ); ?>
+    <?php get_template_part( 'partials/home','intro' ); ?>
 
 </section>
 
 
 <section class="services-section">
 
-    <?php get_template_part( 'includes/home','services' ); ?>
+    <?php get_template_part( 'partials/home','services' ); ?>
   
 </section>
 
 
 <section class="mobile-hidden">
 
-    <?php get_template_part( 'includes/home','desktop-banners' ); ?>
+    <?php get_template_part( 'partials/home','desktop-banners' ); ?>
     
 </section>
 
 <section class="d-flex-mobile desktop-hidden">
 
-    <?php get_template_part( 'includes/home','mobile-banners' ); ?>
+    <?php get_template_part( 'partials/home','mobile-banners' ); ?>
 
 </section>
 
 
 <section class="ex-pleonektimata ex-ml ex-mr">
 
-    <?php get_template_part( 'includes/home','pleonektimata' ); ?>
+    <?php get_template_part( 'partials/home','pleonektimata' ); ?>
 
 </section>
 
 
-<?php  get_template_part( 'includes/home', 'posts' ); ?>
+<?php  get_template_part( 'partials/home', 'posts' ); ?>
 
 
 <section class="ex-map">

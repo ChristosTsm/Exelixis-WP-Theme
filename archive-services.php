@@ -15,7 +15,7 @@ get_header('secondary');
         <h1 class="services text-center"><i>Οι Υπηρεσίες μας</i></h1>
 
         
-        <?php get_template_part('templates/template','services'); ?>
+        <?php get_template_part('partials/services','content'); ?>
 
     </div>
 
