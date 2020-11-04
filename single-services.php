@@ -12,7 +12,7 @@
 
                     <img src="<?php echo get_stylesheet_directory_uri() . '/assets/service-single-arrow.svg' ?>" alt="Επιστροφή στις υπηρεσίες">
 
-                    <a href="<?php echo esc_url( get_page_link( 76 ) ); ?>">Επιστροφη στις υπηρεσιες</a>
+                    <a href="<?php echo esc_url( get_page_link( 76 ) ); ?>"><?php _e('Επιστροφη στις υπηρεσιες','exelixis-circus'); ?></a>
 
                 </div>
 
@@ -21,9 +21,9 @@
             <div class="col-sm-6">
 
                 <div class="breadcrump">
-                    <a href="/">Αρχική</a><span>/</span>
-                    <a href="<?php  echo esc_url( get_page_link( 76 ) );  ?>">Υπηρεσίες</a><span>/</span>
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    <a href="<?php echo esc_url( get_page_link( 35 ) ); ?>"><?php _e('Αρχική','exelixis-circus'); ?></a><span>/</span>
+                    <a href="<?php  echo esc_url( get_page_link( 76 ) );  ?>"><?php _e('Υπηρεσίες','exelixis-circus'); ?></a><span>/</span>
+                    <a href="<?php the_permalink(); ?>"><?php _e(the_title(), 'exelixis-circus'); ?></a>
                 </div>
 
             </div>
@@ -46,13 +46,13 @@
 
             <div class="col-sm-6">
 
-                <h1 class="service-single-title"><i><?php the_title(); ?></i></h1>
+                <h1 class="service-single-title"><i><?php _e(the_title(), 'exelixis-circus'); ?></i></h1>
 
                 <hr class="service-single-hr">
 
                 <div class="service-single-content">
                     
-                    <?php the_content(); ?>
+                    <?php _e(the_content(), 'exelixis-circus'); ?>
 
                 </div>
 

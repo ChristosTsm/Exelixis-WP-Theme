@@ -11773,6 +11773,13 @@ a:hover {
   position: fixed;
   min-width: 100%;
   z-index: 100; }
+  .ex-nav-secondary ul li {
+    color: #666; }
+    .ex-nav-secondary ul li #menu-item-176 a span {
+      color: #fff; }
+    .ex-nav-secondary ul li span {
+      font-family: "IBM Plex Sans", arial;
+      color: #666; }
 
 .intro-section {
   padding: 80px 0;
@@ -12006,6 +12013,8 @@ a:hover {
   font-size: 1.3em;
   text-transform: uppercase;
   padding: 10px 40px; }
+  .post-wrapper .ex-btn-more-grey:hover {
+    color: #666; }
 
 .ex-blog-excerpt {
   margin: 0 0 40px 0;
@@ -12338,7 +12347,13 @@ footer {
   padding: 150px 0; }
 
 .service-single-back-link {
-  margin-bottom: 120px; }
+  margin-bottom: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   .service-single-back-link img {
     width: 50px;
     margin-right: 15px; }
@@ -12423,12 +12438,12 @@ footer {
       align-content: center; }
   .single-post-date img {
     max-width: 100px;
-    margin-right: 20px; }
+    margin-right: 10px; }
   .single-post-date span {
     color: #f37a21;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 1.3em; }
+    font-size: 1.2em; }
 
 .single-post-wrapper .single-post-img {
   min-width: 100%; }
@@ -12507,6 +12522,8 @@ footer {
     max-width: 100%; }
   .ex-nav-secondary {
     position: initial; }
+    .ex-nav-secondary .mobile-logo img {
+      max-width: 70%; }
   .ex-expanded-navigation {
     position: absolute;
     top: 0;
@@ -12680,6 +12697,8 @@ footer {
         margin-top: 30px; }
   .featured-post-inner-text h2 {
     font-size: 1.8em; }
+  .ex-post-img {
+    max-width: 100%; }
   .ex-footer-img {
     max-width: 100%;
     margin-top: -5px;
@@ -12765,8 +12784,9 @@ footer {
     font-size: 3.5em;
     font-family: "IBM Plex Sans", arial; }
   .ex-expanded-col-wrapper .ex-expanded-title-rotated-long {
-    top: 25%;
-    left: -12%; }
+    left: -15%; }
+  .rest-of-posts div div {
+    padding: 0 !important; }
   .ex-expanded-col-wrapper {
     margin: 10px 0 60px 0; }
     .ex-expanded-col-wrapper div {
@@ -12791,7 +12811,36 @@ footer {
     min-width: 100%; }
   .post-wrapper h1 {
     font-size: 2.5em;
-    text-align: center; } }
+    text-align: center; }
+  .services {
+    font-size: 2em;
+    padding: 50px 0 40px 0; }
+  .service-item {
+    margin: 30px 0; }
+    .service-item h1 {
+      font-size: 1.5em; }
+    .service-item hr {
+      margin-bottom: 0; }
+  .service-single-title, .blog-single-title {
+    font-size: 2.5em;
+    margin-top: 20px;
+    text-align: center; }
+  .breadcrump a {
+    font-size: .8em; }
+  .service-single-back-link {
+    margin-bottom: 50px;
+    font-size: 1.2em; }
+    .service-single-back-link img {
+      margin-right: 0; }
+    .service-single-back-link a {
+      word-break: break-all;
+      font-size: 0.85em; }
+  .blog-single-title {
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-size: 1.8em; }
+  .post-date {
+    margin: 10px auto 0 auto; } }
 
 @media (max-width: 768px) {
   html,

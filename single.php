@@ -12,7 +12,7 @@
 
                     <img src="<?php echo get_stylesheet_directory_uri() . '/assets/service-single-arrow.svg' ?>" alt="Επιστροφή στις υπηρεσίες">
 
-                    <a href="#"><?php _e('Επιστροφη στις ανακοινωσεις','exelixis-circus'); ?></a>
+                    <a href="<?php echo esc_url( get_page_link( 91 ) ); ?>"><?php _e('Επιστροφη στις ανακοινωσεις','exelixis-circus'); ?></a>
 
                 </div>
 
@@ -21,8 +21,8 @@
             <div class="col-auto">
 
                 <div class="breadcrump">
-                    <a href="/"><?php _e('Αρχική', 'exelixis-circus'); ?></a><span>/</span>
-                    <a href="/anakoinwseis"><?php _e('Ανακοινώσεις', 'exelixis-circus'); ?></a><span>/</span>
+                    <a href="<?php echo esc_url( get_page_link( 76 ) ); ?>"><?php _e('Αρχική', 'exelixis-circus'); ?></a><span>/</span>
+                    <a href="<?php echo esc_url( get_page_link( 91 ) ); ?>"><?php _e('Ανακοινώσεις', 'exelixis-circus'); ?></a><span>/</span>
                     <a href="<?php the_permalink(); ?>"><?php _e(the_title(), 'exelixis-circus'); ?></a>
                 </div>
 
@@ -48,9 +48,10 @@
 
                 <div class="single-post-date">
 
-                    <img src="<?php echo get_stylesheet_directory_uri() . '/assets/divider.svg' ?>" alt="post date devider">
+                    <img class="mobile-hidden" src="<?php echo get_stylesheet_directory_uri() . '/assets/divider.svg' ?>" alt="post date devider">
 
-                    <span class="post-date"><?php echo get_the_date( 'j F' ); ?><br><?php echo get_the_date( 'Y' ); ?></span>
+                    <span class="post-date mobile-hidden"><?php echo get_the_date( 'j F' ); ?><br><?php echo get_the_date( 'Y' ); ?></span>
+                    <span class="post-date desktop-hidden"><?php echo get_the_date( 'j F Y' ); ?></span>
 
                 </div>
 

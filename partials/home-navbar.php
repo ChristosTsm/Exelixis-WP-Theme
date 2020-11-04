@@ -9,7 +9,7 @@
 
         <div class="ex-logo">
 
-            <a href="#">
+            <a href="<?php echo esc_url( get_page_link( 35 ) ); ?>">
 
                 <img src="<?php echo get_stylesheet_directory_uri() . '/assets/elogo.png' ?>" alt="logo">
 

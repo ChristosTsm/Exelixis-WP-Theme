@@ -1,13 +1,12 @@
 <?php get_header('secondary'); ?>
 
-
 <section class="ex-blog-posts">
 
-    <div class="ex-ml ex-mr d-flex justify-content-around">
+    <div class="ex-ml ex-mr d-flex d-flex-mobile justify-content-around">
 
         <div class="post-wrapper"> 
 
-            <h1>Ανακοινώσεις</h1>
+            <h1><?php _e('Ανακοινώσεις','exelixis-circus'); ?></h1>
 
             <?php 
                 
@@ -37,21 +36,21 @@
                         
                         <div class="featured-post-inner-text">
 
-                            <h2><a  data-aos="fade-in" data-aos-duration="1500" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                            <h2><a  data-aos="fade-in" data-aos-duration="1500" href="<?php the_permalink(); ?>"><?php _e(the_title(),'exelixis-circus'); ?></a></h2>
 
-                            <img class="ex-title-date-devider" src="<?php echo get_stylesheet_directory_uri() . '/assets/divider.svg' ?>" alt="post date devider">
+                            <img class="ex-title-date-devider mobile-hidden" src="<?php echo get_stylesheet_directory_uri() . '/assets/divider.svg' ?>" alt="post date devider">
 
-                            <span class="post-date"><?php echo get_the_date( 'j F' ); ?><br><?php echo get_the_date( 'Y' ); ?></span>
+                            <span class="post-date mobile-hidden"><?php echo get_the_date( 'j F' ); ?><br><?php echo get_the_date( 'Y' ); ?></span>
 
                         </div>
                         
-                        <p class="ex-blog-excerpt"><?php the_excerpt(); ?></p>
+                        <p class="ex-blog-excerpt"><?php _e(the_excerpt(), 'exelixis-circus'); ?></p>
 
                         <div class="ex-read-more">
 
                             <img class="ex-read-more-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/arrow-long.svg'; ?>" alt="Περισσότερα">
 
-                            <a href="<?php the_permalink(); ?>" class="ex-btn-more-grey">Περισσοτερα</a>
+                            <a href="<?php the_permalink(); ?>" class="ex-btn-more-grey"><?php _e('Περισσοτερα','exelixis-circus'); ?></a>
                         
                         </div>
 
@@ -85,7 +84,7 @@
 
                         <?php if(has_post_thumbnail()) : ?>
 
-                        <img  data-aos="fade-in" data-aos-duration="1500" class="ex-post-img" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                        <img  data-aos="fade-in" data-aos-duration="1500" class="ex-post-img" src="<?php the_post_thumbnail_url(); ?>" alt="<?php _e(the_title(),'exelixis-circus'); ?>">
 
                         <?php endif; ?>
 
@@ -103,7 +102,7 @@
 
                             <img class="ex-read-more-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/arrow-long.svg'; ?>" alt="Περισσότερα">
 
-                            <a href="<?php the_permalink(); ?>" class="ex-btn-more-grey">Περισσοτερα</a>
+                            <a href="<?php the_permalink(); ?>" class="ex-btn-more-grey"><?php _e('Περισσοτερα','exelixis-circus'); ?></a>
 
                         </div>
 
@@ -138,7 +137,7 @@
 
                 <?php while($rest_of_posts->have_posts()) : $rest_of_posts->the_post(); ?>
 
-                    <div class="col-md-4 p-5">
+                    <div class="col-md-4 p-5 my-5">
 
                         <?php if(has_post_thumbnail()) : ?>
 
@@ -148,7 +147,7 @@
 
                         <div class="featured-post-inner-text">
 
-                            <h2><a data-aos="fade-in" data-aos-duration="1500" data-aos-delay="300" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                            <h2><a data-aos="fade-in" data-aos-duration="1500" data-aos-delay="300" href="<?php the_permalink(); ?>"><?php _e(the_title(),'exelixis-circus'); ?></a></h2>
 
                             <img class="ex-title-date-devider-simple-post" src="<?php echo get_stylesheet_directory_uri() . '/assets/divider.svg' ?>" alt="post date devider">
 
@@ -160,7 +159,7 @@
 
                             <img class="ex-read-more-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/arrow-long.svg'; ?>" alt="Περισσότερα">
 
-                            <a href="<?php the_permalink(); ?>" class="ex-btn-more-grey">Περισσοτερα</a>
+                            <a href="<?php the_permalink(); ?>" class="ex-btn-more-grey"><?php _e('Περισσοτερα','exelixis-circus'); ?></a>
 
                         </div>
 
@@ -175,6 +174,5 @@
     </div>
 
 </section>
-
 
 <?php get_footer(); ?>

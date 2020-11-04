@@ -12,7 +12,7 @@ get_header('secondary');
 
     <div class="ex-mr ex-ml">
 
-        <h1 class="services text-center"><i>Οι Υπηρεσίες μας</i></h1>
+        <h1 class="services text-center"><i><?php _e('Οι Υπηρεσίες μας','exelixis-circus');?></i></h1>
 
         
         <?php get_template_part('partials/services','content'); ?>

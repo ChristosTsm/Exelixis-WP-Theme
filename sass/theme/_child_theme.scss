@@ -189,6 +189,26 @@ a:hover { text-decoration: none; }
     position: fixed;
     min-width: 100%;
     z-index: 100;
+
+    ul {
+
+        li {
+            color: $dark-grey;
+            #menu-item-176 {
+                a {
+                    span {
+                        color: #fff;
+                    }
+                }
+            }
+            span {
+                font-family: $font-secondary;
+                color: $dark-grey;
+            }
+
+        }
+    }
+
 }
 
 // Intro
@@ -910,6 +930,8 @@ footer {
 
 .service-single-back-link {
     margin-bottom: 120px;
+    display: flex;
+    align-items: center;
 
     img {
         width: 50px;
@@ -1010,14 +1032,14 @@ footer {
     align-content: center;
     img {
         max-width: 100px;
-        margin-right: 20px;
+        margin-right: 10px;
     }
 
     span {
         color: $primary;
         text-transform: uppercase;
         font-weight: 500;
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 
 }

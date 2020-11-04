@@ -47,7 +47,7 @@ get_header('secondary');
 
     <div class="btn-b-home col-md-4 justify-content-center align-content-center">
     
-            <a href="/">
+            <a href="<?php echo esc_url( get_page_link( 35 ) ); ?>">
             
                 <?php _e('Επιστροφη στην αρχικη', 'exelixis-circus'); ?>
             
