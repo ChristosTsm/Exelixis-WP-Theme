@@ -36,16 +36,15 @@ if ( document.getElementById('spitogatos') && document.getElementById('watt') ) 
 }
   
   // Mega Menu Script
-  let open = document.getElementById('ex-open-menu');
-  let close = document.getElementById('ex-close-menu');
+  let open = document.querySelector('#ex-open-menu');
+  let close = document.querySelector('#ex-close-menu');
   let menu = document.querySelector('.ex-expanded-navigation');
-  
+
+
   open.addEventListener("click", openMegaMenu);
   close.addEventListener("click",closeMegaMenu);
-  
-  
+
   function openMegaMenu() {
-      menu.classList.remove('ex-hidden');
       menu.style.opacity = 1;
       menu.style.zIndex = 999;
   }

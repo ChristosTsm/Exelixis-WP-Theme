@@ -20,7 +20,7 @@
 
         <ul class="ex-ul">
 
-            <li class="ex-links mobile-hidden"><span class="ex-active">T:</span> <?php the_field('tel') ?></li>
+            <li class="ex-links mobile-hidden"><span class="ex-active white-label">T:</span> <?php the_field('tel') ?></li>
 
             <li class="ex-sec-links">
 
@@ -34,7 +34,7 @@
             
             </li>
 
-            <li class="ex-links"><span class="mobile-hidden"><?php _e('ΜΕΝΟΥ','exelixis-circus'); ?></span> <i id='ex-open-menu' class="fas fa-bars"></i></li>
+            <li class="ex-links"><span class="mobile-hidden"><?php _e('ΜΕΝΟΥ','exelixis-circus'); ?></span> <i id='ex-open-menu' class="fas fa-bars white-label"></i></li>
 
         </ul>
 

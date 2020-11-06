@@ -11664,13 +11664,27 @@ a:hover {
 #menu-item-176 {
   margin-right: 15px; }
 
+.trp-language-switcher-container a {
+  color: #666; }
+
+.translatepress-en_US header nav ul li div ul #menu-item-175 a {
+  color: #f37a21 !important; }
+
+.translatepress-en_US header .navbar-on-scroll ul li div ul #menu-item-175 a {
+  color: #fff !important; }
+
+.translatepress-el header nav ul li div ul #menu-item-176 a {
+  color: #f37a21 !important; }
+
+.translatepress-el header .navbar-on-scroll ul li div ul #menu-item-176 a {
+  color: #fff !important; }
+
 .secondary-lang ul {
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
   .secondary-lang ul li a {
-    color: #fff;
     margin-right: 15px; }
     .secondary-lang ul li a span {
       font-family: "IBM Plex Sans", arial; }
@@ -11707,14 +11721,15 @@ a:hover {
       .navbar-on-scroll ul .ex-links {
         font-family: "IBM Plex Sans", arial;
         margin: 0 45px;
-        color: #fff !important; }
+        color: #666 !important; }
         .navbar-on-scroll ul .ex-links i {
           cursor: pointer; }
         .navbar-on-scroll ul .ex-links a {
           margin-left: 25px; }
       .navbar-on-scroll ul span {
-        font-family: "IBM Plex Sans", arial;
-        color: #fff !important; } }
+        font-family: "IBM Plex Sans", arial; }
+      .navbar-on-scroll ul .white-label {
+        color: #fff; } }
 
 .ex-nav {
   display: -webkit-box;
@@ -12115,8 +12130,7 @@ a:hover {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer; }
+          align-items: center; }
   .btn-blog-all a, .btn-s-wrapper a, .btn-b-home a {
     position: relative;
     background: #f37a21;
