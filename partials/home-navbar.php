@@ -11,7 +11,7 @@
 
             <a href="<?php echo esc_url( get_page_link( 35 ) ); ?>">
 
-                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/elogo.png' ?>" alt="logo">
+                <img class="mobile-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/elogo.png' ?>" alt="logo">
 
                 <img class="ex-letters-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/logoletters.svg' ?>" alt="Letters Logo">
             
@@ -55,7 +55,7 @@
 
     <?php endwhile; ?>
     
-    <div class="arrow">
+    <div class="arrow mobile-hidden">
 
         <?php echo file_get_contents( get_stylesheet_directory_uri() . '/assets/arrows-animating.svg' ); ?>                        
     

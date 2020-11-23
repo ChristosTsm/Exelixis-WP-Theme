@@ -12,7 +12,7 @@ function ex_services_custom_post_type() {
         'public' => true,
         'has_archive' => true,
         'show_in_rest' => true,
-        'supports' => array('title','editor', 'thumbnail')
+        'supports' => array('title','editor', 'thumbnail','excerpt')
     );
 
     register_post_type( 'services', $args );

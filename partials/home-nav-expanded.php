@@ -12,15 +12,15 @@ $home_page = 35;
 
         <div class="row">
 
-            <div class="col-md-3">
+            <div class="col-lg-3 mobile-hidden">
 
-                <img class="mobile-hidden" src="<?php echo get_stylesheet_directory_uri() . '/assets/mega-menu-logo.png' ?>" alt="Εξέλιξις">
+                <img  src="<?php echo get_stylesheet_directory_uri() . '/assets/mega-menu-logo.png'; ?>" alt="Εξέλιξις">
 
             </div>
 
-            <div class="col-md-3 d-flex justify-content-start justify-content-md-center ex-expanded-col-wrapper">
+            <div class="col-lg-3 col-md-6 col d-flex justify-content-start justify-content-lg-center  ex-expanded-col-wrapper">
 
-                <h3 class="ex-expanded-title-rotated"><?php _e('Μενου','exelixis-circus'); ?></h3>
+                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/menu-gr-ex-nav.svg'; ?>" alt="Μενου">
 
                     <?php 
                     
@@ -32,9 +32,9 @@ $home_page = 35;
 
             </div>
 
-            <div class="col-md-3 d-flex justify-content-start justify-content-md-center ex-expanded-col-wrapper">
+            <div class="col-lg-3 col-md-6 d-flex justify-content-start justify-content-lg-center  ex-expanded-col-wrapper">
 
-                <h3 class="ex-expanded-title-rotated-long"><?php _e('Ασφαλειες','exelixis-circus'); ?></h3>
+                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/asfalies-gr-ex-nav.svg'; ?>" alt="Μενου">
 
                     <?php 
                     
@@ -46,7 +46,7 @@ $home_page = 35;
 
             </div>
 
-            <div class="col-md-3 d-flex ex-expanded-info-wrapper">
+            <div class="col-lg-3 col-md-12 d-flex ex-expanded-info-wrapper">
 
                 <img class="ex-expanded-address-img" src="<?php echo get_stylesheet_directory_uri() . '/assets/mega-menu-address.png' ?>" alt="Επικοινωνία">
 

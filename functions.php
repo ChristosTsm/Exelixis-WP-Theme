@@ -14,3 +14,4 @@ require_once dirname( __FILE__ ) . '/includes/navigation-menus.php';
 require_once dirname( __FILE__ ) . '/includes/text-domain.php';
 
 require_once dirname( __FILE__ ) . '/includes/custom-excerpt.php';
+

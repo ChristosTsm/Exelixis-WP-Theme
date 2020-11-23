@@ -1,4 +1,4 @@
-<img class="ex-e-bg ex-ml" src="<?php echo get_stylesheet_directory_uri() . '/assets/e-bg-image.png' ?>" alt="Exelixis" >
+<img class="ex-e-bg ex-ml m400-hidden" src="<?php echo get_stylesheet_directory_uri() . '/assets/e-bg-image.png' ?>" alt="Exelixis" >
 
 <div class="d-flex ex-about-section container">
 

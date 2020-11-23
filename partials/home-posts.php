@@ -45,7 +45,7 @@
 
                         <div class="ex-read-more">
 
-                            <img class="ex-read-more-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/arrow-long.svg'; ?>" alt="Περισσότερα">
+                            <img class="ex-read-more-arrow mobile-hidden" src="<?php echo get_stylesheet_directory_uri() . '/assets/arrow-long.svg'; ?>" alt="Περισσότερα">
 
                             <a href="<?php the_permalink(); ?>" class="ex-btn-more-grey"><?php _e('Περισσοτερα', 'exelixis-circus'); ?></a>
                         
@@ -97,7 +97,7 @@
 
                         <div class="ex-read-more">
 
-                            <img class="ex-read-more-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/arrow-long.svg'; ?>" alt="<?php _e('Περισσοτερα','exelixis-circus'); ?>">
+                            <img class="ex-read-more-arrow mobile-hidden" src="<?php echo get_stylesheet_directory_uri() . '/assets/arrow-long.svg'; ?>" alt="<?php _e('Περισσοτερα','exelixis-circus'); ?>">
 
                             <a href="<?php the_permalink(); ?>" class="ex-btn-more-grey"><?php _e('Περισσοτερα','exelixis-circus'); ?></a>
 
@@ -117,7 +117,7 @@
 
         <a href="<?php echo esc_url( get_page_link( 91 ) ); ?>">
 
-            <img class="btn-blog-all-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/services-arrow.svg' ?>" alt="<?php _e('όλες οι ανακοινώσεις', 'exelixis-circus'); ?>" >
+            <img class="btn-blog-all-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/posts-arrow.svg' ?>" alt="<?php _e('όλες οι ανακοινώσεις', 'exelixis-circus'); ?>" >
 
             <?php _e('Ολες οι ανακοινωσεις', 'exelixis-circus'); ?>
         

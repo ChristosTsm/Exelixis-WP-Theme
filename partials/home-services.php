@@ -4,7 +4,7 @@
 
         <div class="row align-items-end justify-content-center services-wrapper">
 
-            <div class="col-md-4 ex-services-item" data-aos="fade-up-right">
+            <div class="col-lg-4 col-md-12 ex-services-item" data-aos="fade-up-right">
 
                     <img src="<?php echo get_stylesheet_directory_uri() . '/assets/aytokinito-services.png' ?>" alt="Ασφάλεια αυτοκινήτου">
 
@@ -18,7 +18,7 @@
 
             </div>
 
-            <div class="col-md-4 ex-services-item" data-aos="fade-up" data-aos-delay="550">
+            <div class="col-lg-4 col-md-12 ex-services-item" data-aos="fade-up" data-aos-delay="550">
 
                 <img src="<?php echo get_stylesheet_directory_uri() . '/assets/piros.png' ?>" alt="Ασφάλεια αυτοκινήτου">
 
@@ -26,13 +26,13 @@
 
                     <h3 class="services-link"><a href="<?php echo esc_url( get_page_link( 62 ) ); ?>"><?php _e('Ασφαλεια<br>πυρος','exelixis-circus'); ?></a></h3>
 
-                    <img class="services-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/ipiresies-arrow.png' ?>" alt="ασφαλεια αυτοκινητου">
+                    <img class="services-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/ipiresies-arrow.png' ?>" alt="ασφαλεια πυρος">
 
                 </div>
 
             </div>
 
-            <div class="col-md-4 ex-services-item" data-aos="fade-up-left" data-aos-delay="650">
+            <div class="col-lg-4 col-md-12 ex-services-item" data-aos="fade-up-left" data-aos-delay="650">
 
                 <img src="<?php echo get_stylesheet_directory_uri() . '/assets/astiki-euthini.png' ?>" alt="Ασφάλεια αυτοκινήτου">
 
@@ -40,7 +40,7 @@
 
                     <h3 class="services-link"><a href="<?php echo esc_url( get_page_link( 75 ) ); ?>"><?php _e('Ασφαλεια<br>αστικης ευθυνης', 'exelixis-circus'); ?></a></h3>
 
-                    <img class="services-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/ipiresies-arrow.png' ?>" alt="ασφαλεια αυτοκινητου">
+                    <img class="services-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/ipiresies-arrow.png' ?>" alt="ασφαλεια αστικης ευθυνης">
 
                 </div>
 

@@ -34,7 +34,7 @@
 
         <div class="row">
 
-            <div class="col-sm-6">
+            <div class="col-sm-6 text-center">
 
                 <?php if(has_post_thumbnail( )) : ?>
 

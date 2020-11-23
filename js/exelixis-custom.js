@@ -1,39 +1,39 @@
 jQuery(document).ready(function($){
   "use strict";
 
-  
-if ( document.getElementById('spitogatos') && document.getElementById('watt') ) {
+    
+  if ( document.getElementById('spitogatos') && document.getElementById('watt') ) {
 
-  let spitogatosDiv = document.getElementById('spitogatos'); 
-  let watt = document.getElementById('watt'); 
-  
-  spitogatosDiv.addEventListener('mouseover', function (){
-      watt.style.width = "550px";
-      watt.style.zIndex = "1";
-      spitogatosDiv.style.width = "850px";
-      spitogatosDiv.style.zIndex = "2";
-  });
-  
-  spitogatosDiv.addEventListener('mouseout', function (){
-      watt.style.width = "700px";
-      spitogatosDiv.style.width = "700px";
-      watt.style.zIndex = "2";
-  });
-  
-  watt.addEventListener('mouseout', function (){
-      spitogatosDiv.style.width = "700px";
-      watt.style.width = "700px";
-      watt.style.zIndex = "2";
-  });
-  
-  watt.addEventListener('mouseover', function (){
-      spitogatosDiv.style.width = "550px";
-      spitogatosDiv.style.zIndex = "1";
-      watt.style.width = "850px";
-      watt.style.zIndex = "2";
-  });
+    let spitogatosDiv = document.getElementById('spitogatos'); 
+    let watt = document.getElementById('watt'); 
+    
+    spitogatosDiv.addEventListener('mouseover', function (){
+        watt.style.width = "550px";
+        watt.style.zIndex = "1";
+        spitogatosDiv.style.width = "850px";
+        spitogatosDiv.style.zIndex = "2";
+    });
+    
+    spitogatosDiv.addEventListener('mouseout', function (){
+        watt.style.width = "700px";
+        spitogatosDiv.style.width = "700px";
+        watt.style.zIndex = "2";
+    });
+    
+    watt.addEventListener('mouseout', function (){
+        spitogatosDiv.style.width = "700px";
+        watt.style.width = "700px";
+        watt.style.zIndex = "2";
+    });
+    
+    watt.addEventListener('mouseover', function (){
+        spitogatosDiv.style.width = "550px";
+        spitogatosDiv.style.zIndex = "1";
+        watt.style.width = "850px";
+        watt.style.zIndex = "2";
+    });
 
-}
+  }
   
   // Mega Menu Script
   let open = document.querySelector('#ex-open-menu');
@@ -70,6 +70,15 @@ if ( document.getElementById('spitogatos') && document.getElementById('watt') ) 
     }
     
   }
+
+  if (document.body.classList.contains('translatepress-en_US') && ! document.body.classList.contains('home') ) {
+    document.getElementById('menu-item-175').classList.add('lang-active');
+    document.getElementById('menu-item-175').classList.remove('lang-inactive');
+    document.getElementById('menu-item-176').classList.remove('lang-active');
+    document.getElementById('menu-item-176').classList.add('lang-inactive');
+}
+
+
 
   AOS.init({
     mirror: true,
