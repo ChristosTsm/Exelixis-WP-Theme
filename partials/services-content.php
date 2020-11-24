@@ -20,7 +20,7 @@ get_header('secondary');
 
         <div class="col-md-4 justify-content-center text-center">
 
-            <div class="service-item">
+            <div class="service-item mb-5">
 
                 <div class="service-item-img-wrapper">
 
@@ -37,7 +37,12 @@ get_header('secondary');
 
                 <hr/>
 
-                <p data-aos="fade-in" data-aos-duration="1500"><?php the_excerpt(); ?></p>
+                <div data-aos="fade-in" data-aos-duration="1500" class="ex-excerpt">
+                    
+                    <?php the_excerpt(); ?>
+                
+                </div>
+                
 
             </div>
 

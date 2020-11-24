@@ -4,7 +4,7 @@ $home_page = 35;
 
 ?>
 
-    <footer>
+    <footer id="footer">
 
         <div class="d-flex d-flex-mobile">
 

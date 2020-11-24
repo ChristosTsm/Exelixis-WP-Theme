@@ -11999,12 +11999,15 @@ a:hover {
       margin-top: 100px; }
     .ex-pleonektimata-banners .ex-pleonektimata-item .ex-p-image {
       width: 250px; }
-    .ex-pleonektimata-banners .ex-pleonektimata-item .ex-p-number {
+    .ex-pleonektimata-banners .ex-pleonektimata-item .ex-p-number, .ex-pleonektimata-banners .ex-pleonektimata-item .ex-p-number-4 {
       width: 90px;
       z-index: -1;
       position: absolute;
       top: 0;
       left: 0; }
+    .ex-pleonektimata-banners .ex-pleonektimata-item .ex-p-number-4 {
+      top: -50px;
+      left: -70px; }
     .ex-pleonektimata-banners .ex-pleonektimata-item p {
       color: #f37a21;
       font-size: 1.2em;
@@ -12163,7 +12166,14 @@ a:hover {
   min-width: 100%;
   min-height: 700px; }
 
-footer {
+.ex-map-contact-us {
+  overflow: hidden; }
+  .ex-map-contact-us iframe {
+    min-height: 800px;
+    margin-top: -200px;
+    min-width: 100%; }
+
+#footer {
   margin-top: -50px;
   overflow: hidden; }
 
@@ -12436,6 +12446,12 @@ footer {
     padding: 0 40px; }
   .service-item .service-item-img-wrapper img {
     max-height: 350px; }
+  .service-item .ex-excerpt p {
+    opacity: 0;
+    -webkit-transition: opacity ease-in-out 250ms;
+    transition: opacity ease-in-out 250ms; }
+  .service-item:hover .ex-excerpt p {
+    opacity: 1; }
 
 .single-post-date {
   display: -webkit-box;
@@ -12554,6 +12570,77 @@ footer {
 .about-us-inner-right-col p {
   margin-left: 40px; }
 
+#contact-us {
+  margin-top: -10px; }
+
+.ex-contact-l {
+  background: #e6e6e6;
+  padding-bottom: 150px;
+  position: relative; }
+  .ex-contact-l img {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    z-index: 2;
+    right: -15px;
+    top: 135px; }
+
+.ex-contact-r {
+  background: #666;
+  padding-bottom: 150px; }
+
+.ex-contact-img-div {
+  width: 680px;
+  height: 380px;
+  background: url("../assets/footer-img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0 0 150px;
+  color: #fff;
+  margin-top: -1px;
+  margin-left: -150px; }
+
+.col-flex-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .col-flex-wrapper .ex-contact-info {
+    margin-left: 50px;
+    margin-top: -50px; }
+
+.ex-contact-form {
+  background: #fff;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  padding: 80px;
+  margin-left: -150px;
+  margin-top: -20px; }
+
+div.wpforms-container-full {
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
+
+.wpforms-submit {
+  background: #f37a21 !important;
+  text-transform: uppercase !important;
+  color: #fff !important;
+  font-family: "IBM Plex Sans", arial !important;
+  border: none !important; }
+
+.wpforms-submit-container {
+  text-align: right !important; }
+
+.eng-choice {
+  display: none; }
+
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style
@@ -12631,7 +12718,7 @@ footer {
             flex-direction: column; }
   .ex-pleonektimata-banners .ex-pleonektimata-item {
     margin: 30px 0; }
-  .ex-pleonektimata-item .ex-p-number,
+  .ex-pleonektimata-item .ex-p-number, .ex-pleonektimata-banners .ex-pleonektimata-item .ex-p-number-4,
   .ex-pleonektimata-item .ex-p-image {
     width: 150px !important; }
   .ex-home-posts div {
@@ -12755,10 +12842,10 @@ footer {
             flex-direction: column; }
   .ex-pleonektimata-banners .ex-pleonektimata-item {
     margin: 30px 0; }
-    .ex-pleonektimata-banners .ex-pleonektimata-item .ex-p-number {
+    .ex-pleonektimata-banners .ex-pleonektimata-item .ex-p-number, .ex-pleonektimata-banners .ex-pleonektimata-item .ex-p-number-4 {
       top: -30%;
       left: 30%; }
-  .ex-pleonektimata-item .ex-p-number,
+  .ex-pleonektimata-item .ex-p-number, .ex-pleonektimata-banners .ex-pleonektimata-item .ex-p-number-4,
   .ex-pleonektimata-item .ex-p-image {
     width: 150px !important; }
   .ex-home-posts div {

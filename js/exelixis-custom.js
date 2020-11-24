@@ -56,7 +56,7 @@ jQuery(document).ready(function($){
   
   
 
-    if ( document.getElementById('home-nav') ) {
+  if ( document.getElementById('home-nav') ) {
     let navbar = document.getElementById('home-nav');
     
     window.onscroll = function() {navScrollFunction()};
@@ -76,7 +76,13 @@ jQuery(document).ready(function($){
     document.getElementById('menu-item-175').classList.remove('lang-inactive');
     document.getElementById('menu-item-176').classList.remove('lang-active');
     document.getElementById('menu-item-176').classList.add('lang-inactive');
-}
+  }
+
+  if ( document.body.classList.contains('page-template-page-contact-us') && document.body.classList.contains('translatepress-en_US') ) {
+    document.querySelector('.eng-choice').style.display = "block";
+    document.querySelector('.gr-choice').style.display = "none";
+  }
+
 
 
 

@@ -4,7 +4,7 @@
 
         <div class="ex-pleonektimata-item"  data-aos="fade-up">
 
-            <img class="ex-p-number" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-number-1.svg' ?>" alt="1">
+            <img data-aos="fade-up" data-aos-delay="200" class="ex-p-number" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-number-1.svg' ?>" alt="1">
 
             <img class="ex-p-image" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-1.png' ?>" alt="πλεονεκτήματα εξέλιξις">  
 
@@ -14,7 +14,7 @@
 
         <div class="ex-pleonektimata-item"  data-aos="fade-up" data-aos-delay="500">
 
-            <img class="ex-p-number" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-number-2.svg' ?>" alt="2">
+            <img data-aos="fade-up" data-aos-delay="700" class="ex-p-number" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-number-2.svg' ?>" alt="2">
 
             <img class="ex-p-image" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-2.png' ?>" alt="πλεονεκτήματα εξέλιξις"> 
 
@@ -24,7 +24,7 @@
 
         <div class="ex-pleonektimata-item"  data-aos="fade-up" data-aos-delay="1200">
 
-            <img class="ex-p-number" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-number-3.svg' ?>" alt="3">
+            <img data-aos="fade-up" data-aos-delay="1400" class="ex-p-number" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-number-3.svg' ?>" alt="3">
 
             <img class="ex-p-image" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-3.png' ?>" alt="πλεονεκτήματα εξέλιξις"> 
 
@@ -34,7 +34,7 @@
 
         <div class="ex-pleonektimata-item"  data-aos="fade-up" data-aos-delay="1300">
 
-            <img class="ex-p-number" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-number-4.svg' ?>" alt="4">
+            <img data-aos="fade-up" data-aos-delay="1500" class="ex-p-number-4" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-number-4.svg' ?>" alt="4">
 
             <img class="ex-p-image" src="<?php echo get_stylesheet_directory_uri() . '/assets/p-4.png' ?>" alt="πλεονεκτήματα εξέλιξις">
 
