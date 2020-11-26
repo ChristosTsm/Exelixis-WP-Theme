@@ -25,7 +25,7 @@
 
     <div class="ex-btn-about" data-aos="fade-right" data-aos-delay="650">
 
-        <a class="ex-btn-link" href="#">
+        <a class="ex-btn-link" href="<?php echo esc_url( get_page_link( 188 ) ); ?>">
 
             <img class="btn-img-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/perissotera-arrow.svg' ?>" alt="About us">
 

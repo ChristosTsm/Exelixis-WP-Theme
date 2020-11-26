@@ -20,11 +20,11 @@
 
             <div class="col-lg-4 col-md-12 ex-services-item" data-aos="fade-up" data-aos-delay="550">
 
-                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/piros.png' ?>" alt="Ασφάλεια αυτοκινήτου">
+                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/skafos.png' ?>" alt="Ασφάλεια Σκάφους">
 
                 <div data-aos="fade-up" data-aos-delay="750">
 
-                    <h3 class="services-link"><a href="<?php echo esc_url( get_page_link( 62 ) ); ?>"><?php _e('Ασφαλεια<br>πυρος','exelixis-circus'); ?></a></h3>
+                    <h3 class="services-link"><a href="<?php echo esc_url( get_page_link( 62 ) ); ?>"><?php _e('Ασφαλεια<br>σκαφους','exelixis-circus'); ?></a></h3>
 
                     <img class="services-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/ipiresies-arrow.png' ?>" alt="ασφαλεια πυρος">
 

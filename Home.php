@@ -137,7 +137,7 @@
 
                 <?php while($rest_of_posts->have_posts()) : $rest_of_posts->the_post(); ?>
 
-                    <div class="col-md-4 p-5 my-5">
+                    <div class="col-lg-4 p-5 my-5">
 
                         <?php if(has_post_thumbnail()) : ?>
 

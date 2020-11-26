@@ -18,7 +18,7 @@ get_header('secondary');
 
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-        <div class="col-md-4 justify-content-center text-center">
+        <div class="col-md-12 col-lg-4 justify-content-center text-center">
 
             <div class="service-item mb-5">
 
@@ -50,7 +50,7 @@ get_header('secondary');
 
     <?php endwhile; ?>
 
-    <div class="btn-b-home col-md-4 justify-content-center align-content-center">
+    <div class="btn-b-home col-md-12 col-lg-4 justify-content-center align-content-center">
     
             <a href="<?php echo esc_url( get_page_link( 35 ) ); ?>">
             

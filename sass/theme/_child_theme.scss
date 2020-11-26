@@ -415,9 +415,10 @@ a:hover { text-decoration: none; }
     text-align: center;
     min-height: 1290px;
     h1 {
-        font-size: 70px;
+        font-size: 3.5em;
         font-weight: 700;
         margin-bottom: 150px;
+        color: $primary;
     }
 
     .ex-services-item {
@@ -802,7 +803,7 @@ a:hover { text-decoration: none; }
 
         .ex-footer-img-text {
             color: #fff;
-            font-family: $font-secondary;
+            // font-family: $font-secondary;
             margin: 95px 70px 100px 115px;
             h3 {
                 font-size: 2em;
@@ -851,9 +852,6 @@ a:hover { text-decoration: none; }
     margin: 90px 0 0 50px;
     font-size: 1.2em;
     color: $primary;
-    p {
-        font-family: $font-secondary;
-    }
 }
 
 
@@ -864,10 +862,6 @@ a:hover { text-decoration: none; }
     color: #fff;
     span {
         color: $primary;
-        font-family: $font-secondary;
-    }
-    p {
-        font-family: $font-secondary;
     }
 }
 
@@ -1225,6 +1219,7 @@ a:hover { text-decoration: none; }
 
 #about-us {
     padding: 100px 0;
+    background-color: $light-grey;
 }
 
 .about-single-back-link {
@@ -1255,10 +1250,12 @@ a:hover { text-decoration: none; }
         img {
             height: 30px;
             margin-right: 20px;
+            margin-top: 5px;
         }
 
         p {
             color: $primary;
+            font-size: 1.5rem;
         }
 
     }

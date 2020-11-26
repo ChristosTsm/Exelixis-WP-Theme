@@ -11884,9 +11884,10 @@ a:hover {
   text-align: center;
   min-height: 1290px; }
   .services-section h1 {
-    font-size: 70px;
+    font-size: 3.5em;
     font-weight: 700;
-    margin-bottom: 150px; }
+    margin-bottom: 150px;
+    color: #f37a21; }
   .services-section .ex-services-item > div {
     margin-top: 3.5em; }
   .services-section .ex-services-item h3 {
@@ -12199,7 +12200,6 @@ a:hover {
     margin-bottom: 25px; }
     .ex-footer-img .ex-footer-img-div .ex-footer-img-text {
       color: #fff;
-      font-family: "IBM Plex Sans", arial;
       margin: 95px 70px 100px 115px; }
       .ex-footer-img .ex-footer-img-div .ex-footer-img-text h3 {
         font-size: 2em;
@@ -12244,8 +12244,6 @@ a:hover {
   margin: 90px 0 0 50px;
   font-size: 1.2em;
   color: #f37a21; }
-  .ex-footer-address p {
-    font-family: "IBM Plex Sans", arial; }
 
 .ex-footer-social-icons,
 .ex-footer-tel {
@@ -12254,11 +12252,7 @@ a:hover {
   color: #fff; }
   .ex-footer-social-icons span,
   .ex-footer-tel span {
-    color: #f37a21;
-    font-family: "IBM Plex Sans", arial; }
-  .ex-footer-social-icons p,
-  .ex-footer-tel p {
-    font-family: "IBM Plex Sans", arial; }
+    color: #f37a21; }
 
 .ex-footer-social-icons a {
   -webkit-transition: all ease-in-out 200ms;
@@ -12524,7 +12518,8 @@ a:hover {
   background: linear-gradient(0deg, #f37a21 0%, rgba(255, 255, 255, 0) 85%); }
 
 #about-us {
-  padding: 100px 0; }
+  padding: 100px 0;
+  background-color: #e6e6e6; }
 
 .about-single-back-link {
   margin-bottom: 0; }
@@ -12542,10 +12537,12 @@ a:hover {
 
 .about-us-inner-left-col .about-us-inner-text-l-c img {
   height: 30px;
-  margin-right: 20px; }
+  margin-right: 20px;
+  margin-top: 5px; }
 
 .about-us-inner-left-col .about-us-inner-text-l-c p {
-  color: #f37a21; }
+  color: #f37a21;
+  font-size: 1.5rem; }
 
 .about-us-inner-left-col .about-us-l-c-footer {
   margin-right: 100px; }
@@ -12688,6 +12685,11 @@ div.wpforms-container-full {
     height: 50px; }
     .ex-nav .ex-logo a {
       margin-left: auto; }
+  .ex-nav-secondary {
+    position: static; }
+  .ex-sec-links i {
+    margin-left: 30px;
+    margin-right: 45px; }
   .ex-letters-logo {
     display: none; }
   .ex-inner-text {
@@ -12718,6 +12720,8 @@ div.wpforms-container-full {
             flex-direction: column; }
   .ex-pleonektimata-banners .ex-pleonektimata-item {
     margin: 30px 0; }
+    .ex-pleonektimata-banners .ex-pleonektimata-item .ex-p-number-4 {
+      left: -5px; }
   .ex-pleonektimata-item .ex-p-number, .ex-pleonektimata-banners .ex-pleonektimata-item .ex-p-number-4,
   .ex-pleonektimata-item .ex-p-image {
     width: 150px !important; }
@@ -12774,7 +12778,59 @@ div.wpforms-container-full {
       left: auto;
       font-size: 1.5em; }
     .ex-expanded-col-wrapper .ex-expanded-title-rotated-long {
-      right: 4%; } }
+      right: 4%; }
+  .ex-blog-posts {
+    padding: 20px 0; }
+  .d-flex-mobile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .rest-of-posts {
+    padding-bottom: 50px; }
+    .rest-of-posts div .p-5 {
+      padding: 0 !important; }
+  #about-us {
+    padding: 15px 0; }
+  .about-breadcrump {
+    font-size: 1em; }
+    .about-breadcrump a:nth-child(1) {
+      margin-left: 0; }
+  .about-us-inner-left-col img {
+    height: 400px; }
+  .ex-contact-l img {
+    display: none; }
+  .col-flex-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .col-flex-wrapper .ex-contact-info {
+      margin-left: 0;
+      margin-top: 0; }
+  .ex-contact-img-div {
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
+    padding: 50px 10px 50px 10px; }
+    .ex-contact-img-div h3 {
+      font-size: 1em; }
+  .ex-contact-form {
+    margin-left: 0;
+    margin-top: 0;
+    width: 100%;
+    padding: 15px; }
+  .ex-map-contact-us iframe {
+    min-height: 465px;
+    margin-top: -150px; }
+  .about-breadcrump,
+  .about-single-back-link {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 10px 0; }
+  #footer {
+    margin-top: 0; } }
 
 @media screen and (min-width: 721px) and (max-width: 1280px) {
   body {
@@ -12785,6 +12841,8 @@ div.wpforms-container-full {
     font-size: 1em !important; }
   #ex-open-menu {
     font-size: 1em; }
+  .ex-nav-secondary {
+    position: static; }
   .ex-mr {
     margin-right: 15px; }
   .ex-ml {
@@ -12805,8 +12863,18 @@ div.wpforms-container-full {
     height: 50px; }
     .ex-nav .ex-logo a {
       margin-left: auto; }
+  .ex-sec-links i {
+    margin-left: 30px;
+    margin-right: 45px; }
+  .ex-contact-form {
+    margin-left: 0;
+    margin-top: 0;
+    width: 100%;
+    padding: 15px; }
   .ex-letters-logo {
     display: none; }
+  .col-flex-wrapper .ex-contact-info {
+    margin-left: 0; }
   .ex-header {
     height: 70vh; }
     .ex-header .ex-inner-text {
@@ -12916,6 +12984,17 @@ div.wpforms-container-full {
     .ex-expanded-info-wrapper div {
       margin: 5px 0 0 5px; }
     .ex-expanded-info-wrapper .ex-expanded-tel {
-      margin: 20px 0 5px 5px; } }
+      margin: 20px 0 5px 5px; }
+  .ex-blog-posts {
+    padding: 20px 0; }
+  .d-flex-mobile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .rest-of-posts {
+    padding-bottom: 50px; }
+    .rest-of-posts div .p-5 {
+      padding: 0 !important; } }
 
 /*# sourceMappingURL=child-theme.css.map */

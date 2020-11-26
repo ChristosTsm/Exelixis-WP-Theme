@@ -30,7 +30,7 @@ $home_page = 35;
 
                 <div class="ex-btn-contact">
 
-                    <a href="https://google.com">
+                    <a href="<?php echo esc_url( get_page_link( 218 ) ); ?>">
 
                         <img class="btn-blog-all-arrow btn-contact-arrow" src="<?php echo get_stylesheet_directory_uri() . '/assets/footer-arrow-long.svg' ?>" alt="όλες οι υπηρεσίες" >
 

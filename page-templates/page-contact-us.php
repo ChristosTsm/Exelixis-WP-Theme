@@ -18,13 +18,13 @@ get_header('secondary');
 
     <div class="row">
 
-        <div class="col-lg-4 ex-contact-l">
+        <div class="col-lg-4 col-sm-12 ex-contact-l mobile-hidden">
             <!-- #e6e6e6 -->
             <img src="<?php echo get_stylesheet_directory_uri() . '/assets/contact.svg' ?>" alt="contact">
 
         </div>
 
-        <div class="col-lg-8 ex-contact-r">
+        <div class="col-lg-8 col-sm-12 ex-contact-r">
             <!-- #$dark_grey -->
 
             <div class="col-flex-wrapper">

@@ -38,7 +38,6 @@
         width: 100%;
         margin: 0;
         height: 50px;
-
         .ex-logo {
 
             a {
@@ -46,6 +45,16 @@
             }
 
         }
+    }
+
+    .ex-nav-secondary {
+        position: static; 
+    }
+
+    // burger menu - secondary nav
+    .ex-sec-links i {
+        margin-left: 30px;
+        margin-right: 45px;
     }
 
     .ex-letters-logo {
@@ -90,6 +99,10 @@
 
     .ex-pleonektimata-banners .ex-pleonektimata-item {
         margin: 30px 0;
+
+        .ex-p-number-4 {
+            left: -5px;
+        }
     }
 
     .ex-pleonektimata-item {
@@ -97,6 +110,8 @@
         .ex-p-image {
             width: 150px !important;
         }
+
+        
     }
 
     .ex-home-posts {
@@ -174,6 +189,94 @@
         }
 
     }
+
+    .ex-blog-posts {
+        padding: 20px 0;
+    }
+
+    .d-flex-mobile {
+        flex-direction: column;
+    }
+
+    .rest-of-posts {
+        padding-bottom: 50px;
+        div {
+            .p-5 {
+                padding: 0 !important;
+            }
+        }
+    }
+
+    #about-us {
+        padding: 15px 0;
+    }
+
+    .about-breadcrump {
+        font-size: 1em;
+
+        a:nth-child(1) {
+            margin-left: 0;
+        }
+    }
+
+    .about-us-inner-left-col {
+    
+        img {
+            height: 400px;
+        }
+
+    }
+
+    .ex-contact-l {
+        img {
+            display: none;
+        }
+    }
+
+    .col-flex-wrapper {
+        flex-direction: column;
+
+        .ex-contact-info {
+            margin-left: 0;
+            margin-top: 0;
+        }
+    }
+
+    .ex-contact-img-div {
+        height: 100%;
+        width: 100%;
+        margin-left: 0;
+        padding: 50px 10px 50px 10px;
+       
+        h3 {
+            font-size: 1em;
+        }
+    }
+
+    .ex-contact-form {
+        margin-left: 0;
+        margin-top: 0;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .ex-map-contact-us {
+        iframe {
+            min-height: 465px;
+            margin-top: -150px;
+        }
+    }
+
+    .about-breadcrump,
+    .about-single-back-link {
+        justify-content: center;
+        margin: 10px 0;
+    }
+    
+    #footer {
+        margin-top: 0;
+    }
+    
    
 }
 
@@ -194,6 +297,10 @@
 
     #ex-open-menu {
         font-size: 1em;
+    }
+
+    .ex-nav-secondary {
+        position: static; 
     }
 
     .ex-mr {
@@ -234,8 +341,28 @@
         }
     }
 
+    // burger menu - secondary nav
+    .ex-sec-links i {
+        margin-left: 30px;
+        margin-right: 45px;
+    }
+
+    
+    .ex-contact-form {
+        margin-left: 0;
+        margin-top: 0;
+        width: 100%;
+        padding: 15px;
+    }
+
     .ex-letters-logo {
         display: none;
+    }
+
+    .col-flex-wrapper {
+        .ex-contact-info {
+            margin-left: 0;
+        }
     }
 
 
@@ -401,6 +528,25 @@
 
         .ex-expanded-tel {
             margin: 20px 0 5px 5px;
+        }
+    }
+
+
+    
+    .ex-blog-posts {
+        padding: 20px 0;
+    }
+
+    .d-flex-mobile {
+        flex-direction: column;
+    }
+
+    .rest-of-posts {
+        padding-bottom: 50px;
+        div {
+            .p-5 {
+                padding: 0 !important;
+            }
         }
     }
 }
